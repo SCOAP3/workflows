@@ -1,0 +1,8 @@
+resources:
+    aws:
+      config:
+        aws_access_key_id : ""
+        aws_secret_access_key : ""
+        endpoint_url : ""
+        raw_files_bucket: "scoap3-test-ernesta"
+        modified_files_bucket: ""

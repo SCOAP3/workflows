@@ -42,7 +42,13 @@ server that, by default, is served on http://localhost:3000.
 poetry run dagit
 ```
 
-3. (Optional) If you want to enable Dagster
+3. Start running with [Dagster CLI](https://docs.dagster.io/concepts/modes-resources#dagster-cli). In preset, the [mode](https://github.com/ErnestaP/workflows-1/blob/master/workflows/pipelines/my_pipeline.py#L18-L43) has to be set.
+
+```bash
+poetry run dagster pipeline execute -f workflows/pipelines/my_pipeline.py --preset <preset you want to run>
+```
+
+4. (Optional) If you want to enable Dagster
 [Schedules](https://docs.dagster.io/overview/schedules-sensors/schedules) or
 [Sensors](https://docs.dagster.io/overview/schedules-sensors/sensors) for your pipelines, start the
 [Dagster Daemon process](https://docs.dagster.io/overview/daemon#main) **in a different shell or terminal**:

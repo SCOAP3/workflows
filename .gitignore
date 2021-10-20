@@ -77,3 +77,20 @@ celerybeat-schedule
 # macOS
 .DS_Store
 *.orig
+
+# credentials
+workflows/resources/ftp_resources.yaml
+workflows/resources/ftp_resources_dev.yaml
+workflows/resources/aws_resources_prod.yaml
+workflows/resources/aws_resources.py
+
+# dev folders
+downloaded
+downloaded_from_s3
+jsons
+unzipped_files
+
+# dev files
+oup.xml.zip
+scoap3.pdf.zip
+scoap3.archival.zip

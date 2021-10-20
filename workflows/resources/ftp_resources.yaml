@@ -1,0 +1,7 @@
+resources:
+    ftp:
+      config:
+        ftp_host : ""
+        ftp_user : ""
+        ftp_pass : ""
+        ftp_folder: "dummy_test_dir"

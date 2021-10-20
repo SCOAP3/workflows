@@ -9,7 +9,6 @@ def test_my_pipeline():
     For hints on how to test your Dagster pipelines, see our documentation tutorial on Testing:
     https://docs.dagster.io/tutorial/testable
     """
-    result = execute_pipeline(my_pipeline, mode="test")
+    result = execute_pipeline(my_pipeline, preset="prod")
 
     assert result.success
-    assert result.output_for_solid("hello") == "Hello, Dagster!"

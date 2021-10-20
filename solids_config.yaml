@@ -1,0 +1,4 @@
+solids:
+  download_a_file_from_ftp:
+    config:
+      specific_files_paths: []

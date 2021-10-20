@@ -8,6 +8,11 @@ authors = ["Harris Tzovanakis <me@drjova.com>"]
 python = "^3.8"
 dagster = "^0.12.5"
 dagit = "^0.12.5"
+boto3 = "^1.18.54"
+ftputil = "=3.3.1"
+hepcrawl = {git = "https://github.com/SCOAP3/hepcrawl.git", rev = "python3-compatible"}
+Scrapy = "^2.5.1"
+autosemver = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
