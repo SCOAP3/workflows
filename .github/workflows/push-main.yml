@@ -25,7 +25,7 @@ jobs:
         uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v6.3.1
         with:
           event-type: update
-          repo: cern-sis/kubernetes-scoap3
+          repo: cern-sis/kubernetes-airflow
           images: |
             cern-sis/scoap3/workflows@${{ needs.test.outputs.image-id }}
           token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES_SCOAP3 }}
