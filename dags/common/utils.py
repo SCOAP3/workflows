@@ -12,22 +12,21 @@ from stat import S_ISDIR, S_ISREG
 
 import backoff
 import country_converter as coco
+import pycountry
 import requests
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
+    CHAR_REPLACEMENTS,
     COUNTRIES_DEFAULT_MAPPING,
     CREATIVE_COMMONS_PATTERN,
-    INSTITUTIONS_AND_COUNTRIES_MAPPING,
     LICENSE_PATTERN,
+    SPECIAL_CASES,
+    SPECIAL_PATTERNS,
 )
-from common.exceptions import (
-    FoundMoreThanOneMatchOrNone,
-    UnknownFileExtension,
-    UnknownLicense,
-)
+from common.exceptions import UnknownFileExtension, UnknownLicense
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -321,37 +320,73 @@ def create_or_update_article(data):
         raise
 
 
-def parse_country_from_value(affiliation_value):
-    for key, val in INSTITUTIONS_AND_COUNTRIES_MAPPING.items():
-        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
-            return val
-    country = affiliation_value.split(",")[-1].strip()
-    for key, val in COUNTRIES_DEFAULT_MAPPING.items():
-        if re.search(r"\b%s\b" % key, country, flags=re.IGNORECASE):
-            return val
-
-    try:
-        country_code = cc.convert(country, to="iso2")
-        mapped_countries = []
-        if country_code != "not found":
-            mapped_countries = [
-                {
-                    "code": country_code,
-                    "name": cc.convert(country, to="name_short"),
-                }
-            ]
-
-        if len(mapped_countries) > 1 or len(mapped_countries) == 0:
-            raise FoundMoreThanOneMatchOrNone(affiliation_value)
-        return mapped_countries[0].get("name", "")
-    except (LookupError, FoundMoreThanOneMatchOrNone):
-        return find_country_match_from_mapping(affiliation_value)
+def check_special_cases(normalized_value):
+    match = SPECIAL_PATTERNS.search(normalized_value)
+    if not match:
+        return None
+    return SPECIAL_CASES[match.group(1)]
 
 
-def find_country_match_from_mapping(affiliation_value):
-    for key in COUNTRIES_DEFAULT_MAPPING:
-        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
-            return COUNTRIES_DEFAULT_MAPPING[key]
+def unwrap_country_converter_result(converter_result):
+    if isinstance(converter_result, (list, tuple)):
+        for item in converter_result:
+            if isinstance(item, str) and item.lower() != "not found":
+                return item
+        return None
+    if not converter_result or converter_result.lower() == "not found":
+        return None
+    return converter_result
+
+
+def match_with_country_converter_results(normalized_value):
+    raw_iso2_result = cc.convert(names=normalized_value, to="ISO2")
+    iso2_code = unwrap_country_converter_result(raw_iso2_result)
+    if not iso2_code:
+        return None
+    raw_short_name = cc.convert(names=iso2_code, to="name_short")
+    country_short_name = unwrap_country_converter_result(raw_short_name)
+    if country_short_name:
+        return country_short_name
+
+
+def fuzzy_search_country(normalized_value):
+    normalized_name_parts = normalized_value.split()
+    normalized_name_parts_length = len(normalized_name_parts)
+    max_phrase_length = min(6, normalized_name_parts_length)
+
+    for skip_from_end in range(normalized_name_parts_length):
+        for phrase_length in range(max_phrase_length, 0, -1):
+            phrase_start_index = (
+                normalized_name_parts_length - skip_from_end - phrase_length
+            )
+            if phrase_start_index < 0:
+                continue
+            phrase_end_index = normalized_name_parts_length - skip_from_end
+            search_phrase = " ".join(
+                normalized_name_parts[phrase_start_index:phrase_end_index]
+            )
+            try:
+                fuzzy_matches = pycountry.countries.search_fuzzy(search_phrase)
+                if fuzzy_matches:
+                    return unwrap_country_converter_result(
+                        cc.convert(names=fuzzy_matches[0].alpha_2, to="name_short")
+                    )
+            except LookupError:
+                continue
+
+
+def parse_country_from_value(value):
+    normalized_value = value.lower().translate(CHAR_REPLACEMENTS)
+
+    special_case_country = check_special_cases(normalized_value)
+    if special_case_country:
+        return special_case_country
+
+    converter_country = match_with_country_converter_results(normalized_value)
+    if converter_country:
+        return converter_country
+
+    return fuzzy_search_country(normalized_value)
 
 
 def get_country_ISO_name(country):

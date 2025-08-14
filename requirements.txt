@@ -9,5 +9,6 @@ busypie==0.4.5
 pydantic
 jsonschema
 plyvel
+pycountry
 country_converter
 inspire-utils

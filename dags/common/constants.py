@@ -251,3 +251,55 @@ INSTITUTIONS_AND_COUNTRIES_MAPPING = OrderedDict(
         ("R.O.C", "Taiwan"),
     ]
 )
+
+SPECIAL_CASES = {
+    "european organization for nuclear research": "CERN",
+    "conseil européen pour la recherche nucléaire": "CERN",
+    "stanford linear accelerator center": "United States",
+    "joint institute for nuclear research": "JINR",
+    "fermilab": "United States",
+    "jinr": "JINR",
+    "infn": "Italy",
+    "cern": "CERN",
+    "desy": "Germany",
+    "fnal": "United States",
+    "slack": "United States",
+    "kek": "Japan",
+    "hong kong": "Hong Kong",
+    "hong-kong": "Hong Kong",
+    "republic of china": "Taiwan",
+    "taiwan": "Taiwan",
+    "roc": "Taiwan",
+    "r.o.c": "Taiwan",
+    "people's republic of china": "China",
+    "u.s.a": "United States",
+    "america": "United States",
+    "uk": "United Kingdom",
+    "u.k": "United Kingdom",
+    "northern cyprus": "Türkiye",
+    "north cyprus": "Türkiye",
+    "belgique": "Belgium",
+    "deutschland": "Germany",
+    "democratic people's republic of korea": "North Korea",
+    "dpr korea": "North Korea",
+    "dpr. korea": "North Korea",
+    "d.p.r. korea": "North Korea",
+    "dprk": "North Korea",
+    "d.p.r.k": "North Korea",
+    "korea": "South Korea",
+    "republic of korea": "South Korea",
+    "niger": "Niger",
+    "belgrade": "Serbia",
+    "philipines": "Philippines",
+}
+
+SPECIAL_PATTERNS = re.compile(
+    r"\b("
+    + "|".join(
+        re.escape(k) for k in sorted(SPECIAL_CASES.keys(), key=len, reverse=True)
+    )
+    + r")\b",
+    re.IGNORECASE,
+)
+
+CHAR_REPLACEMENTS = str.maketrans(",-", "  ")
