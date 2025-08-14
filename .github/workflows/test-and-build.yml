@@ -6,6 +6,10 @@ on:
         description: The reference to build
         type: string
         required: true
+    outputs:
+      image-id:
+        description: The ID of image that has been built
+        value: ${{ jobs.build.outputs.image-id }}
 
 env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows
