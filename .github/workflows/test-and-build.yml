@@ -54,14 +54,16 @@ jobs:
 
       - name: Build Image
         id: build
-        uses: cern-sis/gh-workflows/.github/actions/docker-build@v6.5
+        uses: cern-sis/gh-workflows/.github/actions/docker-build@v6.3.1
         with:
           registry: ${{ env.REGISTRY }}
           image: ${{ env.IMAGE }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
+            type=ref,event=tag
           cache: false
+          push: true
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
 
