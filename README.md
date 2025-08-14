@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/cern-sis/workflows/branch/main/graph/badge.svg?token=00LZLXO5OD)](https://codecov.io/gh/cern-sis/workflows)
+[![codecov](https://codecov.io/gh/scoap3/workflows/branch/main/graph/badge.svg?token=00LZLXO5OD)](https://codecov.io/gh/scoap3/workflows)
 
 # Workflows
 
