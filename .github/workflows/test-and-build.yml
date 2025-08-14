@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IOP_FTP_SSH_PRIVATE_KEY: ${{ secrets.IOP_FTP_SSH_PRIVATE_KEY }}
+    outputs:
+      image-id: ${{ steps.build.outputs.image-id }}
     steps:
       - name: Checkout
         if: ${{ github.event_name == 'push' }}
