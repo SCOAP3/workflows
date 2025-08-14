@@ -93,12 +93,3 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           verbose: true
-
-      - name: Deploy QA
-        if: ${{ github.event_name == 'push' }}
-        uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v6.3.1
-        with:
-          repo: cern-sis/kubernetes-airflow
-          event-type: update
-          images: ${{ fromJSON(steps.build.outputs.json).tags[1] }}
-          token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES_SCOAP3 }}
