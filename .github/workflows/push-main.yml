@@ -28,4 +28,4 @@ jobs:
           repo: cern-sis/kubernetes-airflow
           images: |
             cern-sis/scoap3/workflows@${{ needs.test.outputs.image-id }}
-          token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES_SCOAP3 }}
+          token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
