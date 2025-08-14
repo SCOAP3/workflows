@@ -121,7 +121,7 @@ x-airflow-common: &airflow-common
 
 services:
   postgres:
-    image: docker.io/library/postgres:13
+    image: registry.cern.ch/docker.io/library/postgres:13
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
