@@ -1,5 +1,3 @@
-[![codecov](https://codecov.io/gh/scoap3/workflows/branch/main/graph/badge.svg?token=00LZLXO5OD)](https://codecov.io/gh/scoap3/workflows)
-
 # Workflows
 
 The following image describes the process for each publishers. Please note that the number of tasks is the minimum, more tasks can be implemented if the need raises.
