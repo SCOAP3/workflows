@@ -95,4 +95,4 @@ jobs:
           repo: cern-sis/kubernetes-airflow
           event-type: update
           images: ${{ fromJSON(steps.build.outputs.json).tags[1] }}
-          token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
+          token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES_SCOAP3 }}
