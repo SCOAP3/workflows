@@ -9,7 +9,7 @@ on:
     outputs:
       image-id:
         description: The ID of image that has been built
-        value: ${{ jobs.build.outputs.image-id }}
+        value: ${{ jobs.test.outputs.image-id }}
 
 env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows
@@ -17,7 +17,7 @@ env:
   IMAGE: cern-sis/scoap3/workflows
 
 jobs:
-  build_test:
+  test:
     name: Build and Test
     runs-on: ubuntu-latest
     env:
