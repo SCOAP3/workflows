@@ -10,7 +10,7 @@ on:
 env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows
   REGISTRY: registry.cern.ch
-  IMAGE: scoap3/workflows
+  IMAGE: cern-sis/scoap3/workflows
 
 jobs:
   build_test:
