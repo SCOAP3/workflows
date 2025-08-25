@@ -240,7 +240,7 @@ expected_output_with_affiliation_value_only = {
                 {
                     "value": "Department of Physics, Tsinghua University, Beijing 100084",
                     "organization": "Department of Physics, Tsinghua University",
-                    # "country": "China"
+                    "country": "China",
                 }
             ],
             "email": "test@email.com",

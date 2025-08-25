@@ -1,0 +1,3082 @@
+[
+  {
+    "model": "misc.affiliation",
+    "pk": 1,
+    "fields": {
+      "country": "Cyprus",
+      "value": "Department of Physics, University of Cyprus, Lefkosia CY-1678, Cyprus",
+      "organization": "",
+      "author_id": [1]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 2,
+    "fields": {
+      "country": "Italy",
+      "value": "Dipartimento di Fisica dell’Università di Roma “La Sapienza” and INFN, Sezione di Roma I, I-00185 Roma, Italy",
+      "organization": "",
+      "author_id": [2]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 3,
+    "fields": {
+      "country": "Italy",
+      "value": "Dipartimento di Fisica dell’Università di Pisa and INFN, Largo Pontecorvo 3, I-56127 Pisa, Italy",
+      "organization": "",
+      "author_id": [3]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 4,
+    "fields": {
+      "country": "India",
+      "value": "Department of Physics, Indira Gandhi Institute of Technology, Sarang, Dhenkanal, Odisha 759146, India",
+      "organization": "",
+      "author_id": [4]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 5,
+    "fields": {
+      "country": "India",
+      "value": "Department of Mathematics, Birla Institute of Technology and Science-Pilani, Hyderabad Campus, Hyderabad 500078, India",
+      "organization": "",
+      "author_id": [5, 6]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 6,
+    "fields": {
+      "country": "Greece",
+      "value": "Physics Division, National Technical University of Athens, 15780 Zografou Campus, Athens, Greece",
+      "organization": "",
+      "author_id": [7, 9]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 7,
+    "fields": {
+      "country": "Italy",
+      "value": "INFN – Laboratori Nazionali di Frascati, Via Enrico Fermi 40, Frascati, I-00044, Italy",
+      "organization": "",
+      "author_id": [8]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 8,
+    "fields": {
+      "country": "CERN",
+      "value": "Physics Department, Theory Unit, CERN, Geneva 23, CH 1211, Switzerland",
+      "organization": "",
+      "author_id": [8]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 9,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Department of Theoretical Physics, 24 quai E. Ansermet, Geneva 4, CH-1211, Switzerland",
+      "organization": "",
+      "author_id": [9]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 10,
+    "fields": {
+      "country": "United States",
+      "value": "CCPP, Department of Physics, NYU, 4 Washington Pl., New York, NY, 10003, USA",
+      "organization": "",
+      "author_id": [10]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 11,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics and Astronomy, University of Pittsburgh, Pittsburgh, PA 15260, United States",
+      "organization": "",
+      "author_id": [11, 12]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 12,
+    "fields": {
+      "country": "Russia",
+      "value": "Skobeltsyn Institute of Nuclear Physics, Lomonosov Moscow State University, Moscow, 119991, Russia",
+      "organization": "Lomonosov Moscow State University",
+      "author_id": [13, 14]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 13,
+    "fields": {
+      "country": "JINR",
+      "value": "Joint Institute for Nuclear Research, Dubna, Moscow Region, 141980, Russia",
+      "organization": "Joint Institute for Nuclear Research",
+      "author_id": [13]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 14,
+    "fields": {
+      "country": "Russia",
+      "value": "P.N. Lebedev Physics Institute, Moscow, 119991, Russia",
+      "organization": "P.N. Lebedev Physics Institute",
+      "author_id": [15]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 15,
+    "fields": {
+      "country": "China",
+      "value": ", School of Mathematics and Physics, Henan University of Urban Construction, , Pingdingshan 467036, , China,",
+      "organization": "",
+      "author_id": [16, 17]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 16,
+    "fields": {
+      "country": "China",
+      "value": ", College of Science, Henan University of Technology, , Zhengzhou 450000, , China,",
+      "organization": "",
+      "author_id": [18]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 17,
+    "fields": {
+      "country": "China",
+      "value": ", School of Physics and Microelectronics, Zhengzhou University, , Zhengzhou 450001, , China,",
+      "organization": "",
+      "author_id": [19]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 18,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University of York, Department of Mathematics, York, UK",
+      "organization": "",
+      "author_id": [20]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 19,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University of Hertfordshire, School of Physics, Astronomy and Mathematics, Hatfield, UK",
+      "organization": "",
+      "author_id": [21]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 20,
+    "fields": {
+      "country": "Lithuania",
+      "value": "Vilnius University, Institute of Theoretical Physics and Astronomy, Vilnius, Lithuania",
+      "organization": "",
+      "author_id": [21]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 21,
+    "fields": {
+      "country": "India",
+      "value": "Saha Institute of Nuclear Physics, 1/AF Bidhan Nagar, Kolkata, 700064, India",
+      "organization": "",
+      "author_id": [22]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 22,
+    "fields": {
+      "country": "Japan",
+      "value": "Kavli IPMU, TODIAS, University of Tokyo, Kashiwa, 277-8583, Japan",
+      "organization": "",
+      "author_id": [23, 24, 25]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 23,
+    "fields": {
+      "country": "Belgium",
+      "value": "Service de Physique Théorique et Mathématique, Université Libre de Bruxelles and International Solvay Institutes, Campus de la Plaine, CP 231, B-1050 Bruxelles, Belgium",
+      "organization": "",
+      "author_id": [26]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 24,
+    "fields": {
+      "country": "China",
+      "value": "School of Mathematical and Physics, China University of Geosciences (Wuhan), Wuhan 430074, China",
+      "organization": "",
+      "author_id": [27, 29, 30]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 25,
+    "fields": {
+      "country": "China",
+      "value": "Key Laboratory of Quark and Lepton Physics (MOE), Central China Normal University, Wuhan 430079, China",
+      "organization": "",
+      "author_id": [28]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 26,
+    "fields": {
+      "country": "France",
+      "value": "Ecole Polytechnique, IN2P3-CNRS, Laboratoire Leprince-Ringuet, F-91120 Palaiseau, France and IRFU, CEA Saclay, F-91190 Gif-sur-Yvette, France",
+      "organization": "",
+      "author_id": [31]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 27,
+    "fields": {
+      "country": "Germany",
+      "value": "Institut für Theoretische Physik, Universität Giessen, D-35392 Giessen, Germany",
+      "organization": "",
+      "author_id": [32]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 28,
+    "fields": {
+      "country": "Germany",
+      "value": "Institut für Theoretische Physik, Johann Wolfgang Goethe-Universität Frankfurt, D-60438 Frankfurt am Main, Germany",
+      "organization": "",
+      "author_id": [33]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 29,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics and Astronomy, Michigan State University, East Lansing, Michigan 48823, USA",
+      "organization": "",
+      "author_id": [34]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 30,
+    "fields": {
+      "country": "France",
+      "value": "IRFU, CEA Saclay, F-91190 Gif-sur-Yvette, France",
+      "organization": "",
+      "author_id": [35]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 31,
+    "fields": {
+      "country": "Japan",
+      "value": "Department of Physics, Tokai University, 4-1-1 Kitakaname, Hiratsuka, Kanagawa 259-1292, Japan",
+      "organization": "",
+      "author_id": [36]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 32,
+    "fields": {
+      "country": "Japan",
+      "value": "Department of Physics, Shizuoka University, 836 Ohya, Suruga-ku, Shizuoka, 422-8529, Japan",
+      "organization": "Shizuoka University",
+      "author_id": [37]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 33,
+    "fields": {
+      "country": "Japan",
+      "value": "Graduate School of Science and Technology, Shizuoka University, 836 Ohya, Suruga-ku, Shizuoka, 422-8529, Japan",
+      "organization": "Shizuoka University",
+      "author_id": [37]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 34,
+    "fields": {
+      "country": "Chile",
+      "value": "Universidad Técnica Federico Santa María and Centro Científico-Tecnológico de Valparaíso, Casilla 110-V, Valparaíso, Chile",
+      "organization": "",
+      "author_id": [38]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 35,
+    "fields": {
+      "country": "Belgium",
+      "value": "Centre for Cosmology, Particle Physics and Phenomenology, Université Catholique de Louvain, Chemin du cyclotron 2, Louvain-la-Neuve B-1348, Belgium",
+      "organization": "",
+      "author_id": [39]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 36,
+    "fields": {
+      "country": "Germany",
+      "value": "Institut für Physik, Humboldt-Universität zu Berlin, Newtonstraße 15, Berlin, D-12489, Germany",
+      "organization": "Institut für Physik, Humboldt-Universität zu Berlin",
+      "author_id": [40]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 37,
+    "fields": {
+      "country": "Germany",
+      "value": "Max-Planck-Institut für Gravitationsphysik, Albert-Einstein-Institut, Am Mühlenberg 1, Potsdam, D-14476, Germany",
+      "organization": "Max-Planck-Institut für Gravitationsphysik, Albert-Einstein-Institut",
+      "author_id": [40]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 38,
+    "fields": {
+      "country": "Russia",
+      "value": "Institute for Nuclear Research of the Russian Academy of Sciences, Moscow 117312, Russia",
+      "organization": "",
+      "author_id": [41, 42]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 39,
+    "fields": {
+      "country": "Russia",
+      "value": "Physics Department, Lomonosov Moscow State University, Leninskie Gory, Moscow 119991, Russia",
+      "organization": "",
+      "author_id": [42]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 40,
+    "fields": {
+      "country": "Japan",
+      "value": "Center for Gravitational Physics, Yukawa Institute for Theoretical Physics, Kyoto University, 606-8502 Kyoto, Japan",
+      "organization": "",
+      "author_id": [43, 45]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 41,
+    "fields": {
+      "country": "France",
+      "value": "Laboratoire Astroparticule et Cosmologie, CNRS, Université Paris Diderot Paris 7, 75013 Paris, France",
+      "organization": "",
+      "author_id": [44, 46]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 42,
+    "fields": {
+      "country": "Japan",
+      "value": "Kavli Institute for the Physics and Mathematics of the Universe (WPI), The University of Tokyo Institutes for Advanced Study, The University of Tokyo, Kashiwa, Chiba 277-8583, Japan",
+      "organization": "",
+      "author_id": [45]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 43,
+    "fields": {
+      "country": "France",
+      "value": "Institut Denis Poisson (UMR CNRS 7013), Université François Rabelais, Parc de Grandmont, 37200 Tours, France",
+      "organization": "",
+      "author_id": [45, 46]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 44,
+    "fields": {
+      "country": "China",
+      "value": "Institute for Advanced Physics & Mathematics, Zhejiang University of Technology, Hangzhou 310032, China",
+      "organization": "",
+      "author_id": [47]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 45,
+    "fields": {
+      "country": "United States",
+      "value": "GCAP-CASPER, Physics Department, Baylor University, Waco, Texas 76798-7316, USA",
+      "organization": "",
+      "author_id": [47]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 46,
+    "fields": {
+      "country": "India",
+      "value": "Institute of Physics, Sachivalaya Marg, Sainik School Post, Bhubaneswar, 751005, India",
+      "organization": "",
+      "author_id": [48, 49]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 47,
+    "fields": {
+      "country": "Italy",
+      "value": "Dipartimento Interateneo di Fisica âMichelangelo Merlinâ, UniversitÃ di Bari, Via G. Amendola 173, Bari, I-70126, Italy",
+      "organization": "",
+      "author_id": [50]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 48,
+    "fields": {
+      "country": "Italy",
+      "value": "Istituto Nazionale di Fisica Nucleare, Sezione di Bari, Via Orabona 4, Bari, 70126, Italy",
+      "organization": "",
+      "author_id": [50]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 49,
+    "fields": {
+      "country": "China",
+      "value": "Department of Modern Physics, University of Science and Technology of China, Hefei 230026, PR China",
+      "organization": "",
+      "author_id": [51]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 50,
+    "fields": {
+      "country": "United States",
+      "value": "Physics Department, Columbia University, New York, New York 10027, USA",
+      "organization": "",
+      "author_id": [52, 53]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 51,
+    "fields": {
+      "country": "China",
+      "value": "School of Physics and State Key Laboratory of Nuclear Physics and Technology, Peking University, Beijing 100871, China, Collaborative Innovation Center of Quantum Matter, Beijing 100871, China, and Center for High Energy Physics, Peking University, Beijing 100871, China",
+      "organization": "",
+      "author_id": [54]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 52,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "Department of Physics and Astronomy, University of Southampton, Southampton SO17 1BJ, United Kingdom",
+      "organization": "",
+      "author_id": [55, 57]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 53,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "School of Physics and Astronomy, University of Edinburgh, Edinburgh EH9 3JZ, United Kingdom",
+      "organization": "",
+      "author_id": [56]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 54,
+    "fields": {
+      "country": "China",
+      "value": "Center for Theoretical Physics and College of Physics, Jilin University, Changchun 130012, China",
+      "organization": "",
+      "author_id": [58, 59]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 55,
+    "fields": {
+      "country": "Spain",
+      "value": "Departamento de Física Teórica and IPARCOS, Universidad Complutense de Madrid, Plaza de las Ciencias 1, Madrid, 28040, Spain",
+      "organization": "Universidad Complutense de Madrid",
+      "author_id": [60, 61, 62]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 56,
+    "fields": {
+      "country": "Spain",
+      "value": "Instituto de Estructura de la Materia (IEM-CSIC), Serrano 121, Madrid, 28006, Spain",
+      "organization": "Instituto de Estructura de la Materia (IEM-CSIC)",
+      "author_id": [60]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 57,
+    "fields": {
+      "country": "Spain",
+      "value": "Departamento de Física de Partículas, Universidad de Santiago de Compostela, Santiago de Compostela, E-15782, Spain",
+      "organization": "Universidad de Santiago de Compostela",
+      "author_id": [61]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 58,
+    "fields": {
+      "country": "Spain",
+      "value": "Instituto Galego de Física de Altas Enerxias (IGFAE), Santiago de Compostela, E-15782, Spain",
+      "organization": "Instituto Galego de Física de Altas Enerxias (IGFAE)",
+      "author_id": [61]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 59,
+    "fields": {
+      "country": "India",
+      "value": "Department of Physics, Aligarh Muslim University, Aligarh-202002, India",
+      "organization": "",
+      "author_id": [63, 64, 65]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 60,
+    "fields": {
+      "country": "Iran",
+      "value": "Department of Physics, Shahid Beheshti University, G.C., Tehran, Iran",
+      "organization": "",
+      "author_id": [66, 68]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 61,
+    "fields": {
+      "country": "Iran",
+      "value": "Physics Department, Shahrood University of Technology, Shahrood, Iran",
+      "organization": "",
+      "author_id": [67]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 62,
+    "fields": {
+      "country": "CERN",
+      "value": "CERN, Theory Division, CH-1211, Geneva 23, Switzerland",
+      "organization": "",
+      "author_id": [69, 70]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 63,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Paul Scherrer Institut, CH-5232, Villigen PSI, Switzerland",
+      "organization": "",
+      "author_id": [69]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 64,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "Rudolf Peierls Centre for Theoretical Physics, University of Oxford, 1 Keble Road, Oxford, OX1 3NP, United Kingdom",
+      "organization": "",
+      "author_id": [70]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 65,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Albert Einstein Center for Fundamental Physics, Institute for Theoretical Physics, University of Bern, Sidlerstrasse 5, CH-3012, Bern, Switzerland",
+      "organization": "",
+      "author_id": [71]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 66,
+    "fields": {
+      "country": "Germany",
+      "value": "Max Planck Institute for Physics, Föhringer Ring 6, München, 80805, Germany",
+      "organization": "Max Planck Institute for Physics",
+      "author_id": [72, 73, 74]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 67,
+    "fields": {
+      "country": "CERN",
+      "value": "Theoretical Physics Department, CERN, Geneva, Switzerland",
+      "organization": "CERN",
+      "author_id": [75]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 68,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Physik-Institut, Universität Zürich, Winterthurerstrasse 190, Zürich, 8057, Switzerland",
+      "organization": "Physik-Institut, Universität Zürich",
+      "author_id": [76]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 69,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Theory Group LTP, Paul Scherrer Institut, Villigen PSI, CH-5232, Switzerland",
+      "organization": "Paul Scherrer Institut",
+      "author_id": [77]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 70,
+    "fields": {
+      "country": "South Korea",
+      "value": "Quantum Universe Center, KIAS, Seoul, 02455, South Korea",
+      "organization": "Quantum Universe Center, KIAS",
+      "author_id": [78]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 71,
+    "fields": {
+      "country": "United States",
+      "value": "Center for Theoretical Physics, Sloane Physics Laboratory, Yale University, New Haven, Connecticut, 06520-8120, USA",
+      "organization": "Yale University",
+      "author_id": [79]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 72,
+    "fields": {
+      "country": "Finland",
+      "value": "Department of Physics, University of Jyväskylä, Jyväskylä, 40014, Finland",
+      "organization": "University of Jyväskylä",
+      "author_id": [79]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 73,
+    "fields": {
+      "country": "Italy",
+      "value": "Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Genova, Via Dodecaneso 33, Genova, 16146, Italy",
+      "organization": "Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Genova",
+      "author_id": [80]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 74,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "Mathematical Institute, University of Oxford, Woodstock Road, Oxford, OX2 6GG, United Kingdom",
+      "organization": "",
+      "author_id": [81, 82]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 75,
+    "fields": {
+      "country": "Israel",
+      "value": "Department of Physics, Technion, Haifa 32000, Israel",
+      "organization": "",
+      "author_id": [83]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 76,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Institute for Theoretical Studies, ETH Zurich, Clausiusstrasse 47, Zurich, 8092, Switzerland",
+      "organization": "",
+      "author_id": [84]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 77,
+    "fields": {
+      "country": "Switzerland",
+      "value": "Institute for Astronomy, Department of Physics, ETH Zurich, Wolfgang-Pauli-Strasse 27, Zurich, 8093, Switzerland",
+      "organization": "",
+      "author_id": [85]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 78,
+    "fields": {
+      "country": "Germany",
+      "value": "Arnold Sommerfeld Center for Theoretical Physics, Department für Physik, Ludwig-Maximilians-Universität München, München, Germany",
+      "organization": "",
+      "author_id": [86, 88]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 79,
+    "fields": {
+      "country": "France",
+      "value": "Univ Lyon, Ens de Lyon, Univ Claude Bernard, CNRS, Laboratoire de Physique, Lyon, France",
+      "organization": "",
+      "author_id": [87]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 80,
+    "fields": {
+      "country": "Germany",
+      "value": "Max-Planck-Institut für Physik, Werner-Heisenberg-Institut, München, Germany",
+      "organization": "",
+      "author_id": [88]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 81,
+    "fields": {
+      "country": "China",
+      "value": "School of Electrical and Electronic Engineering, Anhui Science and Technology University, Bengbu 233000, China",
+      "organization": "",
+      "author_id": [89]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 82,
+    "fields": {
+      "country": "China",
+      "value": "Lanzhou Center for Theoretical Physics, Key Laboratory of Theoretical Physics of Gansu Province, and Frontiers Science Center for Rare Isotopes, Lanzhou University, Lanzhou 730000, China",
+      "organization": "",
+      "author_id": [89, 90, 92]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 83,
+    "fields": {
+      "country": "China",
+      "value": "Research Center for Hadron and CSR Physics, Lanzhou University & Institute of Modern Physics of CAS, Lanzhou 730000, China",
+      "organization": "",
+      "author_id": [89, 90, 92]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 84,
+    "fields": {
+      "country": "China",
+      "value": "School of Physical Science and Technology, Lanzhou University, Lanzhou 730000, China",
+      "organization": "",
+      "author_id": [90, 92]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 85,
+    "fields": {
+      "country": "China",
+      "value": "College of Science, Henan University of Engineering, Zhengzhou 451191, China",
+      "organization": "",
+      "author_id": [91]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 86,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Physics Department, Boğaziçi University 34342 Bebek, Istanbul, Turkey",
+      "organization": "",
+      "author_id": [93]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 87,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics, North Carolina State University, Raleigh, North Carolina 27695, USA",
+      "organization": "",
+      "author_id": [93, 94]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 88,
+    "fields": {
+      "country": "United States",
+      "value": "Physics Department, Brookhaven National Laboratory, High Energy Theory Group, Upton, New York 11973, USA",
+      "organization": "",
+      "author_id": [95, 97]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 89,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics and Astronomy, University of Kansas, Lawrence, Kansas 66045, USA",
+      "organization": "",
+      "author_id": [96]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 90,
+    "fields": {
+      "country": "United States",
+      "value": "Joseph Henry Laboratories, Princeton University, Princeton, NJ, 08544, USA",
+      "organization": "Princeton University",
+      "author_id": [98]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 91,
+    "fields": {
+      "country": "France",
+      "value": "Institut des Hautes Études Scientifiques, 35 route de Chartres, Bures-sur-Yvette, 91440, France",
+      "organization": "Institut des Hautes Études Scientifiques",
+      "author_id": [99]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 92,
+    "fields": {
+      "country": "France",
+      "value": "Laboratoire de Physique de l’Ecole normale supérieure, ENS, Université PSL, CNRS, Sorbonne Université, Université de Paris, Paris, F-75005, France",
+      "organization": "ENS, Université PSL, CNRS, Sorbonne Université, Université de Paris",
+      "author_id": [99]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 94,
+    "fields": {
+      "country": "Germany",
+      "value": "Department of Physics, Wuppertal University, Gaussstrasse 20, D-42119 Wuppertal, Germany",
+      "organization": "",
+      "author_id": [101, 103, 104]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 95,
+    "fields": {
+      "country": "Germany",
+      "value": "IAS/JSC, Forschungszentrum Jülich, D-52425 Jülich, Germany",
+      "organization": "",
+      "author_id": [101, 103, 104, 105]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 96,
+    "fields": {
+      "country": "Hungary",
+      "value": "Institute for Theoretical Physics, Eötvös University, Pázmány Peter sétany 1/A, H-1117 Budapest, Hungary",
+      "organization": "",
+      "author_id": [101, 102, 103, 105]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 97,
+    "fields": {
+      "country": "Hungary",
+      "value": "MTA-ELTE Lendület Lattice Gauge Theory Research Group, Budapest, Hungary",
+      "organization": "",
+      "author_id": [102, 105]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 98,
+    "fields": {
+      "country": "United States",
+      "value": "Nuclear Science Division, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd, Berkeley, CA 97420, United States",
+      "organization": "",
+      "author_id": [106]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 99,
+    "fields": {
+      "country": "Germany",
+      "value": "Institute for Theoretical Solid State Physics, IFW Dresden, 01069 Dresden, Germany",
+      "organization": "",
+      "author_id": [107, 111]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 100,
+    "fields": {
+      "country": "Germany",
+      "value": "Institute for Theoretical Physics and Würzburg-Dresden Cluster of Excellence ct.qmat, Julius-Maximilians-Universität Würzburg, 97074 Würzburg, Germany",
+      "organization": "",
+      "author_id": [108, 109, 110, 112]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 101,
+    "fields": {
+      "country": "Germany",
+      "value": "Institute for Theoretical Physics and Würzburg-Dresden Cluster of Excellence ct.qmat, Technische Universität Dresden, 01069 Dresden, Germany",
+      "organization": "",
+      "author_id": [111]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 102,
+    "fields": {
+      "country": "Canada",
+      "value": "Département de Physique, de Génie Physique et d’Optique, Université Laval, 1045 avenue de la Médecine, Québec, QC, G1V 0A6, Canada",
+      "organization": "Université Laval",
+      "author_id": [113, 114]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 103,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics, Yale University, 217 Prospect Street, New Haven, CT, 06520, USA",
+      "organization": "Yale University",
+      "author_id": [115]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 104,
+    "fields": {
+      "country": "Indonesia",
+      "value": "Research Center for Physics, Indonesian Institute of Sciences (LIPI), Kompleks PUSPITEK Serpong, Tangerang, 15310, Indonesia",
+      "organization": "",
+      "author_id": [116]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 105,
+    "fields": {
+      "country": "Indonesia",
+      "value": "Indonesia Center for Theoretical and Mathematical Physics (ICTMP), Bandung, 40132, Indonesia",
+      "organization": "",
+      "author_id": [116]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 106,
+    "fields": {
+      "country": "Netherlands",
+      "value": "Institute for Theoretical Physics, University of Amsterdam, Valckenierstraat 65, Amsterdam, 1018 XE, The Netherlands",
+      "organization": "",
+      "author_id": [117]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 107,
+    "fields": {
+      "country": "Japan",
+      "value": "Hakubi Center, Kyoto University, Yoshida-Ushinomiyacho, Sakyo-ku, Kyoto, 606-8501, Japan",
+      "organization": "",
+      "author_id": [118]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 108,
+    "fields": {
+      "country": "Japan",
+      "value": "Yukawa Institute for Theoretical Physics (YITP), Kyoto University, Kitashirakawa Oiwakecho, Sakyo-ku, Kyoto, 606-8502, Japan",
+      "organization": "",
+      "author_id": [118]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 109,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "Department of Mathematical Sciences, University of Bath, Claverton Down, Bath, BA2 7AY, U.K.",
+      "organization": "",
+      "author_id": [119]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 110,
+    "fields": {
+      "country": "Italy",
+      "value": "INFN, Sezione di Bologna, via Irnerio 46, I-40126, Bologna, Italy",
+      "organization": "",
+      "author_id": [120]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 111,
+    "fields": {
+      "country": "Italy",
+      "value": "Dipartimento di Scienze Fisiche, Informatiche e Matematiche, UniversitÃ degli Studi di Modena e Reggio Emilia, via Campi 213/A, I-41125, Modena, Italy",
+      "organization": "",
+      "author_id": [120]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 112,
+    "fields": {
+      "country": "Israel",
+      "value": "Faculty of Exact Sciences, School of Physics and Astronomy, Tel Aviv University, Ramat Aviv 69978, Israel",
+      "organization": "",
+      "author_id": [121]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 113,
+    "fields": {
+      "country": "India",
+      "value": "Indian Institute of Science Education and Research, Homi Bhabha Road, Pashan, Pune 411 008, India",
+      "organization": "",
+      "author_id": [122]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 114,
+    "fields": {
+      "country": "India",
+      "value": "Department of Theoretical Physics, Tata Institute of Fundamental Research, Navy Nagar, Mumbai 400005, India",
+      "organization": "",
+      "author_id": [123]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 115,
+    "fields": {
+      "country": "South Africa",
+      "value": "National Institute for Theoretical Physics, School of Physics and Mandelstam Institute for Theoretical Physics, University of the Witwatersrand, Johannesburg Wits 2050, South Africa",
+      "organization": "",
+      "author_id": [124]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 116,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics and Astronomy, Michigan State University, East Lansing, MI, 48824, United States",
+      "organization": "",
+      "author_id": [125, 127]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 117,
+    "fields": {
+      "country": "Japan",
+      "value": "KEK Theory Center, Tsukuba, 305-0801, Japan",
+      "organization": "",
+      "author_id": [126]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 118,
+    "fields": {
+      "country": "China",
+      "value": "The Institute of Astrophysics, Huazhong Normal University, Wuhan, 430079, China",
+      "organization": "",
+      "author_id": [128, 129, 130]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 119,
+    "fields": {
+      "country": "China",
+      "value": "Xinjiang Astronomical Observatory, CAS, Urumqi, 830011, China",
+      "organization": "",
+      "author_id": [129]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 120,
+    "fields": {
+      "country": "Italy",
+      "value": "International Centre for Theoretical Physics, Strada Costiera 11, Trieste, Italy",
+      "organization": "",
+      "author_id": [131]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 121,
+    "fields": {
+      "country": "Canada",
+      "value": "TRIUMF, 4004 Wesbrook Mall, Vancouver BC V6T 2A3, Canada",
+      "organization": "",
+      "author_id": [132, 135]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 122,
+    "fields": {
+      "country": "United States",
+      "value": "Department of Physics and Astronomy, University of California, Los Angeles Los Angeles, California 90095-1547, USA",
+      "organization": "",
+      "author_id": [133]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 123,
+    "fields": {
+      "country": "Japan",
+      "value": "Kavli Institute for the Physics and Mathematics of the Universe (WPI), UTIAS The University of Tokyo, Kashiwa, Chiba 277-8583, Japan",
+      "organization": "",
+      "author_id": [133]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 124,
+    "fields": {
+      "country": "Netherlands",
+      "value": "Van Swinderen Instituut, Rijksuniverseit Groningen, 9747 AG, Netherlands",
+      "organization": "",
+      "author_id": [134]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 125,
+    "fields": {
+      "country": "Japan",
+      "value": "Theoretical Research Division, Nishina Center, RIKEN, Saitama, 351-0198, Japan",
+      "organization": "",
+      "author_id": [136, 139, 140]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 126,
+    "fields": {
+      "country": "Japan",
+      "value": "Department of Physics, The University of Tokyo, Tokyo, 113-0033, Japan",
+      "organization": "",
+      "author_id": [137]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 127,
+    "fields": {
+      "country": "Japan",
+      "value": "Center for Computational Sciences, University of Tsukuba, Ibaraki, 305-8571, Japan",
+      "organization": "",
+      "author_id": [138, 142, 144, 145]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 128,
+    "fields": {
+      "country": "Japan",
+      "value": "Yukawa Institute of Theoretical Physics, Kyoto University, Kyoto, 606-8502, Japan",
+      "organization": "",
+      "author_id": [138, 143]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 129,
+    "fields": {
+      "country": "Japan",
+      "value": "Kavli IPMU (WPI), The University of Tokyo, Chiba, 606-8502, Japan",
+      "organization": "",
+      "author_id": [140]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 130,
+    "fields": {
+      "country": "Japan",
+      "value": "College of Bioresource Science, Nihon University, Kanagawa, 252-0880, Japan",
+      "organization": "",
+      "author_id": [141]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 131,
+    "fields": {
+      "country": "Iran",
+      "value": "School of Physics, Institute for Research in Fundamental Sciences, P.O. Box 19395-5531, Tehran, Iran",
+      "organization": "",
+      "author_id": [146, 148]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 132,
+    "fields": {
+      "country": "Iran",
+      "value": "School of Particles and Accelerators, Institute for Research in Fundamental Sciences (IPM), P.O. Box 19395-5531, Tehran, Iran",
+      "organization": "",
+      "author_id": [147, 149]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 133,
+    "fields": {
+      "country": "United States",
+      "value": "Ernest Orlando Lawrence Berkeley National Laboratory, University of California, 1 Cyclotron Road, Berkeley, CA, 94720, U.S.A.",
+      "organization": "",
+      "author_id": [150]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 134,
+    "fields": {
+      "country": "France",
+      "value": "LPTHE, CNRS, UMR 7589, 4 Place Jussieu, Paris, F-75252, France",
+      "organization": "",
+      "author_id": [151]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 135,
+    "fields": {
+      "country": "JINR",
+      "value": "Bogoliubov Laboratory of Theoretical Physics, Joint Institute for Nuclear Research, Dubna, Moscow region, 141980, Russia",
+      "organization": "",
+      "author_id": [152, 153]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 2,
+    "fields": {
+      "country": "North Korea",
+      "value": "Kim Il Sung University, Pyongyang, Democratic People's Republic of Korea",
+      "organization": "",
+      "author_id": [2]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 3,
+    "fields": {
+      "country": "North Korea",
+      "value": "Institute of Nuclear Physics, Academy of Sciences, DPR Korea",
+      "organization": "",
+      "author_id": [3]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 4,
+    "fields": {
+      "country": "North Korea",
+      "value": "Pyongyang University of Science and Technology, DPR. Korea",
+      "organization": "",
+      "author_id": [4]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 5,
+    "fields": {
+      "country": "CERN",
+      "value": "CERN, European Organization for Nuclear Research, 1211 Geneva 23",
+      "organization": "",
+      "author_id": [5]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 6,
+    "fields": {
+      "country": "CERN",
+      "value": "European Organization for Nuclear Research, Meyrin, Geneva",
+      "organization": "",
+      "author_id": [6]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 7,
+    "fields": {
+      "country": "Japan",
+      "value": "KEK, High Energy Accelerator Research Organization, Tsukuba, Ibaraki 305-0801",
+      "organization": "",
+      "author_id": [7]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 8,
+    "fields": {
+      "country": "Germany",
+      "value": "DESY, Deutsches Elektronen-Synchrotron, Notkestraße 85, 22607 Hamburg",
+      "organization": "",
+      "author_id": [8]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 9,
+    "fields": {
+      "country": "United States",
+      "value": "FERMILAB, Fermi National Accelerator Laboratory, Batavia, IL 60510",
+      "organization": "",
+      "author_id": [9]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 10,
+    "fields": {
+      "country": "United States",
+      "value": "FNAL, P.O. Box 500, Batavia, Illinois 60510",
+      "organization": "",
+      "author_id": [10]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 11,
+    "fields": {
+      "country": "United States",
+      "value": "SLACK, Stanford Linear Accelerator Center, 2575 Sand Hill Road, Menlo Park, CA 94025",
+      "organization": "",
+      "author_id": [11]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 12,
+    "fields": {
+      "country": "United States",
+      "value": "Stanford Linear Accelerator Center, Stanford University, Stanford, CA 94309",
+      "organization": "",
+      "author_id": [12]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 13,
+    "fields": {
+      "country": "JINR",
+      "value": "Joint Institute for Nuclear Research, Dubna, Moscow Region 141980",
+      "organization": "",
+      "author_id": [13]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 14,
+    "fields": {
+      "country": "JINR",
+      "value": "JINR, Laboratory of Theoretical Physics, Dubna",
+      "organization": "",
+      "author_id": [14]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 15,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Eastern Mediterranean University, Famagusta, Northern Cyprus",
+      "organization": "",
+      "author_id": [15]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 16,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Near East University, Nicosia, North Cyprus",
+      "organization": "",
+      "author_id": [16]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 17,
+    "fields": {
+      "country": "United States",
+      "value": "University of New Mexico, Albuquerque, New Mexico 87131",
+      "organization": "",
+      "author_id": [17]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 18,
+    "fields": {
+      "country": "China",
+      "value": "South China Normal University, Guangzhou 510006",
+      "organization": "",
+      "author_id": [18]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 19,
+    "fields": {
+      "country": "Hong Kong",
+      "value": "The University of Hong Kong, Pokfulam Road, Hong Kong China",
+      "organization": "",
+      "author_id": [19]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 20,
+    "fields": {
+      "country": "Hong Kong",
+      "value": "Chinese University of Hong Kong, Shatin, Hong-Kong China",
+      "organization": "",
+      "author_id": [20]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 21,
+    "fields": {
+      "country": "Hong Kong",
+      "value": "Hong Kong University of Science and Technology, Hong Kong, China",
+      "organization": "",
+      "author_id": [21]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 22,
+    "fields": {
+      "country": "Hong Kong",
+      "value": "City University of Hong Kong, Kowloon Tong, Hong Kong",
+      "organization": "",
+      "author_id": [22]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 23,
+    "fields": {
+      "country": "Hong Kong",
+      "value": "Hong Kong Polytechnic University, Hung Hom, Hong-Kong",
+      "organization": "",
+      "author_id": [23]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 24,
+    "fields": {
+      "country": "Algeria",
+      "value": "University of Sciences and Technology Houari Boumediene, Algiers, Algeria",
+      "organization": "",
+      "author_id": [24]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 25,
+    "fields": {
+      "country": "Argentina",
+      "value": "Universidad de Buenos Aires, Facultad de Ciencias Exactas y Naturales, Argentina",
+      "organization": "",
+      "author_id": [25]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 26,
+    "fields": {
+      "country": "Armenia",
+      "value": "Yerevan State University, Alex Manoogian Street 1, Armenia",
+      "organization": "",
+      "author_id": [26]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 27,
+    "fields": {
+      "country": "Australia",
+      "value": "University of Melbourne, Parkville, Victoria 3010, Australia",
+      "organization": "",
+      "author_id": [27]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 28,
+    "fields": {
+      "country": "Austria",
+      "value": "University of Vienna, Universitätsring 1, 1010 Vienna, Austria",
+      "organization": "",
+      "author_id": [28]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 29,
+    "fields": {
+      "country": "Azerbaijan",
+      "value": "Baku State University, Z. Khalilov str. 23, AZ1148 Baku, Azerbaijan",
+      "organization": "",
+      "author_id": [29]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 30,
+    "fields": {
+      "country": "Belarus",
+      "value": "Belarusian State University, Independence Avenue 4, 220030 Minsk, Belarus",
+      "organization": "",
+      "author_id": [30]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 31,
+    "fields": {
+      "country": "Belgium",
+      "value": "Université libre de Bruxelles, Avenue Franklin Roosevelt 50, 1050 Brussels, Belgium",
+      "organization": "",
+      "author_id": [31]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 32,
+    "fields": {
+      "country": "Belgium",
+      "value": "Université catholique de Louvain, Place de l'Université 1, 1348 Louvain-la-Neuve, Belgique",
+      "organization": "",
+      "author_id": [32]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 33,
+    "fields": {
+      "country": "Bangladesh",
+      "value": "University of Dhaka, Ramna, Dhaka 1000, Bangladesh",
+      "organization": "",
+      "author_id": [33]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 34,
+    "fields": {
+      "country": "Brazil",
+      "value": "Universidade de São Paulo, Cidade Universitária, São Paulo 05508-010, Brazil",
+      "organization": "",
+      "author_id": [34]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 35,
+    "fields": {
+      "country": "Brazil",
+      "value": "Universidade Federal do Rio de Janeiro, Cidade Universitária, Rio de Janeiro 21941-972, Brasil",
+      "organization": "",
+      "author_id": [35]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 36,
+    "fields": {
+      "country": "Benin",
+      "value": "University of Abomey-Calavi, 01 BP 526, Cotonou, Benin",
+      "organization": "",
+      "author_id": [36]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 37,
+    "fields": {
+      "country": "Benin",
+      "value": "Université d'Abomey-Calavi, Porto-Novo, Bénin",
+      "organization": "",
+      "author_id": [37]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 38,
+    "fields": {
+      "country": "Bulgaria",
+      "value": "Sofia University, 15 Tsar Osvoboditel Blvd, 1504 Sofia, Bulgaria",
+      "organization": "",
+      "author_id": [38]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 39,
+    "fields": {
+      "country": "Bosnia and Herzegovina",
+      "value": "University of Sarajevo, Obala Kulina bana 7/II, 71000 Sarajevo, Bosnia and Herzegovina",
+      "organization": "",
+      "author_id": [39]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 40,
+    "fields": {
+      "country": "Canada",
+      "value": "University of Toronto, 27 King's College Circle, Toronto, ON M5S 1A1, Canada",
+      "organization": "",
+      "author_id": [40]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 41,
+    "fields": {
+      "country": "Chile",
+      "value": "Universidad de Chile, Av. Libertador Bernardo O'Higgins 1058, Santiago, Chile",
+      "organization": "",
+      "author_id": [41]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 42,
+    "fields": {
+      "country": "Taiwan",
+      "value": "National Taiwan University, No. 1, Sec. 4, Roosevelt Road, Taipei 10617, ROC",
+      "organization": "",
+      "author_id": [42]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 43,
+    "fields": {
+      "country": "Taiwan",
+      "value": "Academia Sinica, 128 Academia Road, Section 2, Nankang, Taipei 11529, R.O.C",
+      "organization": "",
+      "author_id": [43]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 44,
+    "fields": {
+      "country": "Taiwan",
+      "value": "National Central University, No. 300, Zhongda Rd., Zhongli District, Taoyuan City 32001, Republic of China",
+      "organization": "",
+      "author_id": [44]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 45,
+    "fields": {
+      "country": "China",
+      "value": "Tsinghua University, Beijing 100084, China (PRC)",
+      "organization": "",
+      "author_id": [45]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 46,
+    "fields": {
+      "country": "China",
+      "value": "Beijing University, Haidian District, Beijing 100871, PR China",
+      "organization": "",
+      "author_id": [46]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 47,
+    "fields": {
+      "country": "China",
+      "value": "Shanghai Jiao Tong University, 800 Dongchuan Road, Shanghai 200240, China",
+      "organization": "",
+      "author_id": [47]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 48,
+    "fields": {
+      "country": "China",
+      "value": "Institute of High Energy Physics, Chinese Academy of Sciences, Beijing 100049, People's Republic of China",
+      "organization": "",
+      "author_id": [48]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 49,
+    "fields": {
+      "country": "Taiwan",
+      "value": "Fudan University, 220 Handan Road, 200433, Republic of China",
+      "organization": "",
+      "author_id": [49]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 50,
+    "fields": {
+      "country": "Colombia",
+      "value": "Universidad Nacional de Colombia, Carrera 30 No. 45-03, Bogotá, Colombia",
+      "organization": "",
+      "author_id": [50]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 51,
+    "fields": {
+      "country": "Costa Rica",
+      "value": "Universidad de Costa Rica, Ciudad Universitaria Rodrigo Facio, San José, Costa Rica",
+      "organization": "",
+      "author_id": [51]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 52,
+    "fields": {
+      "country": "Cuba",
+      "value": "Universidad de La Habana, San Lázaro y L, Vedado, La Habana, Cuba",
+      "organization": "",
+      "author_id": [52]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 53,
+    "fields": {
+      "country": "Croatia",
+      "value": "University of Zagreb, Trg maršala Tita 14, 10000 Zagreb, Croatia",
+      "organization": "",
+      "author_id": [53]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 54,
+    "fields": {
+      "country": "Cyprus",
+      "value": "University of Cyprus, 1 University Avenue, 2109 Aglantzia, Nicosia, Cyprus",
+      "organization": "",
+      "author_id": [54]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 55,
+    "fields": {
+      "country": "Czechia",
+      "value": "Charles University, Ovocný trh 3-5, 116 36 Prague 1, Czech Republic",
+      "organization": "",
+      "author_id": [55]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 56,
+    "fields": {
+      "country": "Czechia",
+      "value": "Masaryk University, Žerotínovo nám. 617/9, 601 77 Brno, Czech",
+      "organization": "",
+      "author_id": [56]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 57,
+    "fields": {
+      "country": "Czechia",
+      "value": "Czech Technical University in Prague, Jugoslávských partyzánů 1580/3, 160 00 Prague 6, Czechia",
+      "organization": "",
+      "author_id": [57]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 58,
+    "fields": {
+      "country": "Denmark",
+      "value": "University of Copenhagen, Nørregade 10, 1165 Copenhagen K, Denmark",
+      "organization": "",
+      "author_id": [58]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 59,
+    "fields": {
+      "country": "Egypt",
+      "value": "Cairo University, Giza 12613, Egypt",
+      "organization": "",
+      "author_id": [59]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 60,
+    "fields": {
+      "country": "Estonia",
+      "value": "University of Tartu, Ülikooli 18, 50090 Tartu, Estonia",
+      "organization": "",
+      "author_id": [60]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 61,
+    "fields": {
+      "country": "Ecuador",
+      "value": "Pontificia Universidad Católica del Ecuador, Av. 12 de Octubre 1076, Quito, Ecuador",
+      "organization": "",
+      "author_id": [61]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 62,
+    "fields": {
+      "country": "Finland",
+      "value": "University of Helsinki, Yliopistonkatu 4, 00100 Helsinki, Finland",
+      "organization": "",
+      "author_id": [62]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 63,
+    "fields": {
+      "country": "France",
+      "value": "Sorbonne Université, 21 rue de l'école de médecine, 75006 Paris, France",
+      "organization": "",
+      "author_id": [63]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 64,
+    "fields": {
+      "country": "Germany",
+      "value": "Max Planck Institute for Physics, Föhringer Ring 6, 80805 München, Germany",
+      "organization": "",
+      "author_id": [64]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 65,
+    "fields": {
+      "country": "Germany",
+      "value": "Universität Heidelberg, Grabengasse 1, 69117 Heidelberg, Deutschland",
+      "organization": "",
+      "author_id": [65]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 66,
+    "fields": {
+      "country": "Greece",
+      "value": "National Technical University of Athens, Heroon Polytechniou 9, 157 80 Zografou, Greece",
+      "organization": "",
+      "author_id": [66]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 67,
+    "fields": {
+      "country": "Hungary",
+      "value": "Eötvös Loránd University, Egyetem tér 1-3, 1053 Budapest, Hungary",
+      "organization": "",
+      "author_id": [67]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 68,
+    "fields": {
+      "country": "Iceland",
+      "value": "University of Iceland, Suðurgata 4-6, 101 Reykjavík, Iceland",
+      "organization": "",
+      "author_id": [68]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 69,
+    "fields": {
+      "country": "India",
+      "value": "Indian Institute of Technology Bombay, Powai, Mumbai 400076, India",
+      "organization": "",
+      "author_id": [69]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 70,
+    "fields": {
+      "country": "Indonesia",
+      "value": "University of Indonesia, Pondok Cina, Beji, Depok City, West Java 16424, Indonesia",
+      "organization": "",
+      "author_id": [70]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 71,
+    "fields": {
+      "country": "Iran",
+      "value": "University of Tehran, 16th Azar St, Tehran 14174, Iran",
+      "organization": "",
+      "author_id": [71]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 72,
+    "fields": {
+      "country": "Ireland",
+      "value": "Trinity College Dublin, College Green, Dublin 2, D02 PN40, Ireland",
+      "organization": "",
+      "author_id": [72]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 73,
+    "fields": {
+      "country": "Israel",
+      "value": "Tel Aviv University, P.O. Box 39040, Tel Aviv 6997801, Israel",
+      "organization": "",
+      "author_id": [73]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 74,
+    "fields": {
+      "country": "Italy",
+      "value": "Università di Roma La Sapienza, Piazzale Aldo Moro 5, 00185 Roma, Italy",
+      "organization": "",
+      "author_id": [74]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 75,
+    "fields": {
+      "country": "Italy",
+      "value": "Università di Bologna, Via Zamboni 33, 40126 Bologna, Italia",
+      "organization": "",
+      "author_id": [75]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 76,
+    "fields": {
+      "country": "Japan",
+      "value": "University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan",
+      "organization": "",
+      "author_id": [76]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 77,
+    "fields": {
+      "country": "Jamaica",
+      "value": "University of the West Indies, Mona, Kingston 7, Jamaica",
+      "organization": "",
+      "author_id": [77]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 78,
+    "fields": {
+      "country": "South Korea",
+      "value": "Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea",
+      "organization": "",
+      "author_id": [78]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 79,
+    "fields": {
+      "country": "South Korea",
+      "value": "KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
+      "organization": "",
+      "author_id": [79]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 80,
+    "fields": {
+      "country": "South Korea",
+      "value": "Yonsei University, 50 Yonsei-ro, Seodaemun-gu, Seoul 03722, South Korea",
+      "organization": "",
+      "author_id": [80]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 81,
+    "fields": {
+      "country": "Latvia",
+      "value": "University of Latvia, 19 Raina Blvd, Riga LV-1586, Latvia",
+      "organization": "",
+      "author_id": [81]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 82,
+    "fields": {
+      "country": "Lebanon",
+      "value": "American University of Beirut, Riad El-Solh, Beirut 1107 2020, Lebanon",
+      "organization": "",
+      "author_id": [82]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 83,
+    "fields": {
+      "country": "Lithuania",
+      "value": "Vilnius University, Universiteto g. 3, 01513 Vilnius, Lithuania",
+      "organization": "",
+      "author_id": [83]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 84,
+    "fields": {
+      "country": "Luxembourg",
+      "value": "University of Luxembourg, 2 Avenue de l'Université, 4365 Esch-sur-Alzette, Luxembourg",
+      "organization": "",
+      "author_id": [84]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 85,
+    "fields": {
+      "country": "North Macedonia",
+      "value": "Ss. Cyril and Methodius University, Bul. Goce Delčev 9, 1000 Skopje, Macedonia",
+      "organization": "",
+      "author_id": [85]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 86,
+    "fields": {
+      "country": "Mexico",
+      "value": "Universidad Nacional Autónoma de México, Ciudad Universitaria, Coyoacán, 04510 Ciudad de México, Mexico",
+      "organization": "",
+      "author_id": [86]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 87,
+    "fields": {
+      "country": "Mexico",
+      "value": "Instituto Politécnico Nacional, Av. Luis Enrique Erro s/n, Unidad Profesional Adolfo López Mateos, México",
+      "organization": "",
+      "author_id": [87]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 88,
+    "fields": {
+      "country": "Monaco",
+      "value": "International University of Monaco, 2 Avenue Albert II, 98000 Monaco",
+      "organization": "",
+      "author_id": [88]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 89,
+    "fields": {
+      "country": "Montenegro",
+      "value": "University of Montenegro, Cetinjski put bb, 81000 Podgorica, Montenegro",
+      "organization": "",
+      "author_id": [89]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 90,
+    "fields": {
+      "country": "Morocco",
+      "value": "Mohammed V University, Avenue des Nations Unies, Rabat, Morocco",
+      "organization": "",
+      "author_id": [90]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 91,
+    "fields": {
+      "country": "Niger",
+      "value": "Abdou Moumouni University, Boulevard Mali Bero, Niamey, Niger",
+      "organization": "",
+      "author_id": [91]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 92,
+    "fields": {
+      "country": "Nigeria",
+      "value": "University of Lagos, Akoka, Lagos 100213, Nigeria",
+      "organization": "",
+      "author_id": [92]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 93,
+    "fields": {
+      "country": "Netherlands",
+      "value": "University of Amsterdam, Spuistraat 210, 1012 VT Amsterdam, Netherlands",
+      "organization": "",
+      "author_id": [93]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 94,
+    "fields": {
+      "country": "Netherlands",
+      "value": "Delft University of Technology, Stevinweg 1, 2628 CN Delft, The Netherlands",
+      "organization": "",
+      "author_id": [94]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 95,
+    "fields": {
+      "country": "New Zealand",
+      "value": "University of Auckland, 23 Symonds Street, Auckland 1010, New Zealand",
+      "organization": "",
+      "author_id": [95]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 96,
+    "fields": {
+      "country": "New Zealand",
+      "value": "Victoria University of Wellington, Kelburn Parade, Wellington 6012, Zealand",
+      "organization": "",
+      "author_id": [96]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 97,
+    "fields": {
+      "country": "Norway",
+      "value": "University of Oslo, Blindern, 0315 Oslo, Norway",
+      "organization": "",
+      "author_id": [97]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 98,
+    "fields": {
+      "country": "Oman",
+      "value": "Sultan Qaboos University, Al-Khoud 123, Muscat, Oman",
+      "organization": "",
+      "author_id": [98]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 99,
+    "fields": {
+      "country": "Oman",
+      "value": "University of Nizwa, Birkat Al Mouz, Nizwa 616, Sultanate of Oman",
+      "organization": "",
+      "author_id": [99]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 100,
+    "fields": {
+      "country": "Pakistan",
+      "value": "University of the Punjab, Quaid-e-Azam Campus, Lahore 54590, Pakistan",
+      "organization": "",
+      "author_id": [100]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 101,
+    "fields": {
+      "country": "Panama",
+      "value": "Universidad de Panamá, Vía Transístmica, Panamá City, Panama",
+      "organization": "",
+      "author_id": [101]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 102,
+    "fields": {
+      "country": "Philippines",
+      "value": "University of the Philippines Diliman, Quezon City 1101, Philipines",
+      "organization": "",
+      "author_id": [102]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 103,
+    "fields": {
+      "country": "Poland",
+      "value": "University of Warsaw, Krakowskie Przedmieście 26/28, 00-927 Warsaw, Poland",
+      "organization": "",
+      "author_id": [103]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 104,
+    "fields": {
+      "country": "Portugal",
+      "value": "Universidade de Lisboa, Alameda da Universidade, 1649-004 Lisboa, Portugalo",
+      "organization": "",
+      "author_id": [104]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 105,
+    "fields": {
+      "country": "Portugal",
+      "value": "University of Porto, Rua Dr. Roberto Frias, 4200-465 Porto, Portugal",
+      "organization": "",
+      "author_id": [105]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 106,
+    "fields": {
+      "country": "China",
+      "value": "Chinese Academy of Sciences, 52 Sanlihe Rd, Beijing 100864, P.R.China",
+      "organization": "",
+      "author_id": [106]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 107,
+    "fields": {
+      "country": "China",
+      "value": "Nanjing University, 22 Hankou Road, Nanjing 210093, People's Republic of China",
+      "organization": "",
+      "author_id": [107]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 108,
+    "fields": {
+      "country": "Belarus",
+      "value": "National Academy of Sciences, Surganova Street 1, 220072 Minsk, Republic of Belarus",
+      "organization": "",
+      "author_id": [108]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 109,
+    "fields": {
+      "country": "Benin",
+      "value": "Institut de Mathématiques et de Sciences Physiques, Université d'Abomey-Calavi, Republic of Benin",
+      "organization": "",
+      "author_id": [109]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 110,
+    "fields": {
+      "country": "South Korea",
+      "value": "Pohang University of Science and Technology, 77 Cheongam-ro, Nam-gu, Pohang 37673, Republic of Korea",
+      "organization": "",
+      "author_id": [110]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 111,
+    "fields": {
+      "country": "San Marino",
+      "value": "Università degli Studi della Repubblica di San Marino, Salita alla Rocca 44, 47890 San Marino, Republic of San Marino",
+      "organization": "",
+      "author_id": [111]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 112,
+    "fields": {
+      "country": "South Africa",
+      "value": "University of Cape Town, Private Bag X3, Rondebosch 7701, Republic of South Africa",
+      "organization": "",
+      "author_id": [112]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 113,
+    "fields": {
+      "country": "Romania",
+      "value": "University of Bucharest, Mihail Kogălniceanu 36-46, 050107 Bucharest, Romania",
+      "organization": "",
+      "author_id": [113]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 114,
+    "fields": {
+      "country": "Russia",
+      "value": "Moscow State University, Leninskie Gory 1, Moscow 119991, Russia",
+      "organization": "",
+      "author_id": [114]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 115,
+    "fields": {
+      "country": "Russia",
+      "value": "Saint Petersburg State University, Universitetskaya Emb. 7-9, St Petersburg 199034, Russian Federation",
+      "organization": "",
+      "author_id": [115]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 116,
+    "fields": {
+      "country": "Saudi Arabia",
+      "value": "King Abdulaziz University, Abdullah Sulayman, Jeddah 21589, Saudi Arabia",
+      "organization": "",
+      "author_id": [116]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 117,
+    "fields": {
+      "country": "Saudi Arabia",
+      "value": "King Saud University, Riyadh 11451, Kingdom of Saudi Arabia",
+      "organization": "",
+      "author_id": [117]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 118,
+    "fields": {
+      "country": "Saudi Arabia",
+      "value": "Princess Nourah bint Abdulrahman University, Riyadh 11671, Arabia",
+      "organization": "",
+      "author_id": [118]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 119,
+    "fields": {
+      "country": "Serbia",
+      "value": "University of Belgrade, Studentski trg 1, 11000 Belgrade, Serbia",
+      "organization": "",
+      "author_id": [119]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 120,
+    "fields": {
+      "country": "Singapore",
+      "value": "National University of Singapore, 21 Lower Kent Ridge Rd, Singapore 119077",
+      "organization": "",
+      "author_id": [120]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 121,
+    "fields": {
+      "country": "Slovakia",
+      "value": "Comenius University, Šafárikovo nám. 6, 814 99 Bratislava, Slovak Republic",
+      "organization": "",
+      "author_id": [121]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 122,
+    "fields": {
+      "country": "Slovakia",
+      "value": "Slovak University of Technology, Vazovova 5, 812 43 Bratislava, Slovak",
+      "organization": "",
+      "author_id": [122]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 123,
+    "fields": {
+      "country": "Slovakia",
+      "value": "University of Žilina, Univerzitná 8215/1, 010 26 Žilina, Slovakia",
+      "organization": "",
+      "author_id": [123]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 124,
+    "fields": {
+      "country": "Slovenia",
+      "value": "University of Ljubljana, Kongresni trg 12, 1000 Ljubljana, Slovenia",
+      "organization": "",
+      "author_id": [124]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 125,
+    "fields": {
+      "country": "South Africa",
+      "value": "University of the Witwatersrand, 1 Jan Smuts Avenue, Braamfontein, Johannesburg 2000, South Africa",
+      "organization": "",
+      "author_id": [125]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 126,
+    "fields": {
+      "country": "South Africa",
+      "value": "University of KwaZulu-Natal, Private Bag X01, Scottsville, Pietermaritzburg 3209, Africa",
+      "organization": "",
+      "author_id": [126]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 127,
+    "fields": {
+      "country": "Spain",
+      "value": "Universidad Complutense de Madrid, Av. Séneca 2, 28040 Madrid, España",
+      "organization": "",
+      "author_id": [127]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 128,
+    "fields": {
+      "country": "Spain",
+      "value": "Universidad de Barcelona, Gran Via de les Corts Catalanes 585, 08007 Barcelona, Spain",
+      "organization": "",
+      "author_id": [128]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 129,
+    "fields": {
+      "country": "Sudan",
+      "value": "University of Khartoum, Khartoum 11111, Sudan",
+      "organization": "",
+      "author_id": [129]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 130,
+    "fields": {
+      "country": "Sweden",
+      "value": "Stockholm University, Universitetsvägen 10, 106 91 Stockholm, Sweden",
+      "organization": "",
+      "author_id": [130]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 131,
+    "fields": {
+      "country": "Switzerland",
+      "value": "ETH Zurich, Rämistrasse 101, 8092 Zurich, Switzerland",
+      "organization": "",
+      "author_id": [131]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 132,
+    "fields": {
+      "country": "Syria",
+      "value": "Damascus University, Umayyad Square, Damascus, Syria",
+      "organization": "",
+      "author_id": [132]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 133,
+    "fields": {
+      "country": "Taiwan",
+      "value": "National Cheng Kung University, No. 1, University Road, Tainan City 701, Taiwan",
+      "organization": "",
+      "author_id": [133]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 134,
+    "fields": {
+      "country": "Thailand",
+      "value": "Chulalongkorn University, Phayathai Rd, Wang Mai, Pathum Wan, Bangkok 10330, Thailand",
+      "organization": "",
+      "author_id": [134]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 135,
+    "fields": {
+      "country": "Tunisia",
+      "value": "University of Tunis, 92 Avenue 9 Avril 1938, Tunis 1007, Tunisia",
+      "organization": "",
+      "author_id": [135]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 136,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Boğaziçi University, Bebek, 34342 Istanbul, Turkey",
+      "organization": "",
+      "author_id": [136]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 137,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Middle East Technical University, Üniversiteler Mah. Dumlupınar Blv. No:1, 06800 Ankara, Turkey",
+      "organization": "",
+      "author_id": [137]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 138,
+    "fields": {
+      "country": "Ukraine",
+      "value": "Taras Shevchenko National University of Kyiv, Volodymyrska Street 60, Kyiv 01033, Ukraine",
+      "organization": "",
+      "author_id": [138]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 139,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University of Oxford, Wellington Square, Oxford OX1 2JD, United Kingdom",
+      "organization": "",
+      "author_id": [139]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 140,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University of Cambridge, The Old Schools, Trinity Ln, Cambridge CB2 1TN, United Kingdom",
+      "organization": "",
+      "author_id": [140]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 141,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "Imperial College London, South Kensington Campus, London SW7 2AZ, United Kingdom of Great Britain and Northern Ireland",
+      "organization": "",
+      "author_id": [141]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 142,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University College London, Gower Street, London WC1E 6BT, UK",
+      "organization": "",
+      "author_id": [142]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 143,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University of Manchester, Oxford Road, Manchester M13 9PL, England",
+      "organization": "",
+      "author_id": [143]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 144,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "University of Edinburgh, Old College, South Bridge, Edinburgh EH8 9YL, Scotland",
+      "organization": "",
+      "author_id": [144]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 145,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "Cardiff University, Park Place, Cardiff CF10 3AT, Wales",
+      "organization": "",
+      "author_id": [145]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 146,
+    "fields": {
+      "country": "Australia",
+      "value": "University of Sydney, Eastern Ave, Camperdown, New South Wales 2006, Australia",
+      "organization": "",
+      "author_id": [146]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 147,
+    "fields": {
+      "country": "United Kingdom",
+      "value": "King's College London, Strand, London WC2R 2LS, U.K",
+      "organization": "",
+      "author_id": [147]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 148,
+    "fields": {
+      "country": "United States",
+      "value": "Harvard University, Massachusetts Hall, Cambridge, MA 02138, United States of America",
+      "organization": "",
+      "author_id": [148]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 149,
+    "fields": {
+      "country": "United States",
+      "value": "Massachusetts Institute of Technology, 77 Massachusetts Ave, Cambridge, MA 02139, United States",
+      "organization": "",
+      "author_id": [149]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 150,
+    "fields": {
+      "country": "United States",
+      "value": "Stanford University, 450 Serra Mall, Stanford, CA 94305, USA",
+      "organization": "",
+      "author_id": [150]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 151,
+    "fields": {
+      "country": "United States",
+      "value": "California Institute of Technology, 1200 E California Blvd, Pasadena, CA 91125, U.S.A",
+      "organization": "",
+      "author_id": [151]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 152,
+    "fields": {
+      "country": "United States",
+      "value": "University of California Berkeley, Berkeley, CA 94720, U.S.A.",
+      "organization": "",
+      "author_id": [152]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 153,
+    "fields": {
+      "country": "United States",
+      "value": "Princeton University, Princeton, NJ 08544, America",
+      "organization": "",
+      "author_id": [153]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 154,
+    "fields": {
+      "country": "Uruguay",
+      "value": "Universidad de la República, Av. 18 de Julio 1968, 11200 Montevideo, Uruguay",
+      "organization": "",
+      "author_id": [154]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 155,
+    "fields": {
+      "country": "Uzbekistan",
+      "value": "National University of Uzbekistan, University Street 4, Tashkent 100174, Uzbekistan",
+      "organization": "",
+      "author_id": [155]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 156,
+    "fields": {
+      "country": "Venezuela",
+      "value": "Universidad Central de Venezuela, Ciudad Universitaria, Caracas 1051, Venezuela",
+      "organization": "",
+      "author_id": [156]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 157,
+    "fields": {
+      "country": "Vietnam",
+      "value": "Hanoi University of Science and Technology, 1 Dai Co Viet Street, Hanoi, Vietnam",
+      "organization": "",
+      "author_id": [157]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 158,
+    "fields": {
+      "country": "Vietnam",
+      "value": "Vietnam National University, 144 Xuân Thủy, Cầu Giấy, Hà Nội, Viet Nam",
+      "organization": "",
+      "author_id": [158]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 159,
+    "fields": {
+      "country": "Yemen",
+      "value": "Sana'a University, Al Jamiah Street, Sana'a, Yemen",
+      "organization": "",
+      "author_id": [159]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 160,
+    "fields": {
+      "country": "Peru",
+      "value": "Universidad Nacional Mayor de San Marcos, Av. Universitaria s/n, Lima 1, Peru",
+      "organization": "",
+      "author_id": [160]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 161,
+    "fields": {
+      "country": "Kuwait",
+      "value": "Kuwait University, P.O. Box 5969, Safat 13060, Kuwait",
+      "organization": "",
+      "author_id": [161]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 162,
+    "fields": {
+      "country": "Sri Lanka",
+      "value": "University of Colombo, 94 Cumaratunga Munidasa Mawatha, Colombo 00300, Sri Lanka",
+      "organization": "",
+      "author_id": [162]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 163,
+    "fields": {
+      "country": "Sri Lanka",
+      "value": "University of Peradeniya, Peradeniya 20400, Lanka",
+      "organization": "",
+      "author_id": [163]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 164,
+    "fields": {
+      "country": "Kazakhstan",
+      "value": "Al-Farabi Kazakh National University, al-Farabi Ave 71, Almaty 050040, Kazakhstan",
+      "organization": "",
+      "author_id": [164]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 165,
+    "fields": {
+      "country": "Mongolia",
+      "value": "National University of Mongolia, P.O. Box 46A/523, Ulaanbaatar 14201, Mongolia",
+      "organization": "",
+      "author_id": [165]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 166,
+    "fields": {
+      "country": "United Arab Emirates",
+      "value": "American University of Sharjah, P.O. Box 26666, Sharjah, United Arab Emirates",
+      "organization": "",
+      "author_id": [166]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 167,
+    "fields": {
+      "country": "United Arab Emirates",
+      "value": "Khalifa University, P.O. Box 127788, Abu Dhabi, Emirates",
+      "organization": "",
+      "author_id": [167]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 168,
+    "fields": {
+      "country": "Malaysia",
+      "value": "University of Malaya, 50603 Kuala Lumpur, Malaysia",
+      "organization": "",
+      "author_id": [168]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 169,
+    "fields": {
+      "country": "Qatar",
+      "value": "Qatar University, Al Tarfa, Doha 2713, Qatar",
+      "organization": "",
+      "author_id": [169]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 170,
+    "fields": {
+      "country": "Kyrgyz Republic",
+      "value": "American University of Central Asia, 7/6 Aaly Tokombaev Street, Bishkek 720060, Kyrgyz Republic",
+      "organization": "",
+      "author_id": [170]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 171,
+    "fields": {
+      "country": "Jordan",
+      "value": "University of Jordan, Queen Rania Street, Amman 11942, Jordan",
+      "organization": "",
+      "author_id": [171]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 172,
+    "fields": {
+      "country": "Serbia",
+      "value": "Institute of Physics, University of Belgrade, Pregrevica 118, 11080 Belgrade",
+      "organization": "",
+      "author_id": [172]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 173,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Faculty of Engineering, Istanbul Technical University, Maslak 34469, Istanbul",
+      "organization": "",
+      "author_id": [173]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 174,
+    "fields": {
+      "country": "Türkiye",
+      "value": "Department of Physics, Ankara University, Tandogan, Ankara",
+      "organization": "",
+      "author_id": [174]
+    }
+  },
+  {
+    "model": "misc.affiliation",
+    "pk": 176,
+    "fields": {
+      "country": "Georgia",
+      "value": "Tbilisi State University, 0179 Tbilisi, Georgia",
+      "organization": "",
+      "author_id": [176]
+    }
+  }
+]

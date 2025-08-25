@@ -528,8 +528,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Minfang",
             "affiliations": [
                 {
-                    "country": "USA",
-                    "organization": "Brookhaven National Laboratory, Upton, USA",
+                    "country": "United States",
+                    "organization": "Brookhaven National Laboratory, Upton, United States",
                 }
             ],
         },
