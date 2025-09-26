@@ -301,10 +301,11 @@ class IOPParser(IParser):
             country = self._get_country(article, rid)
             if country:
                 institution_and_country["country"] = country
-            if institution and country:
-                institution_and_country["organization"] = ", ".join(
-                    [institution, country]
-                )
+            if institution:
+                institution_and_country["organization"] = institution
+                institution_and_country["value"] = institution
+                if country:
+                    institution_and_country["value"] = ", ".join([institution, country])
             return institution_and_country
         except AttributeError:
             self.logger.error("Referred id is not found")

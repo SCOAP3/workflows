@@ -214,11 +214,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -228,7 +230,8 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
+                    "organization": "School of Physical Sciences, University of Chinese Academy of Sciences",
+                    "value": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
                 }
             ],
         },
@@ -238,11 +241,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "Germany",
-                    "organization": "Institut für Physik, Technische Universität Berlin, Germany",
+                    "organization": "Institut für Physik, Technische Universität Berlin",
+                    "value": "Institut für Physik, Technische Universität Berlin, Germany",
                 },
             ],
         },
@@ -252,15 +257,18 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
+                    "organization": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University)",
+                    "value": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                 },
             ],
         },
@@ -270,11 +278,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "Switzerland",
-                    "organization": "École Polytechnique Fédérale de Lausanne, Switzerland",
+                    "organization": "École Polytechnique Fédérale de Lausanne",
+                    "value": "École Polytechnique Fédérale de Lausanne, Switzerland",
                 },
             ],
         },
@@ -284,11 +294,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -298,11 +310,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -312,11 +326,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -326,11 +342,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -340,11 +358,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -354,11 +374,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -368,7 +390,8 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
+                    "organization": "School of Physical Sciences, University of Chinese Academy of Sciences",
+                    "value": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
                 }
             ],
         },
@@ -378,7 +401,8 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "School of Physics, Sun Yat-Sen University, China",
+                    "organization": "School of Physics, Sun Yat-Sen University",
+                    "value": "School of Physics, Sun Yat-Sen University, China",
                 }
             ],
         },
@@ -388,7 +412,8 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "School of Physics, Nanjing University, China",
+                    "organization": "School of Physics, Nanjing University",
+                    "value": "School of Physics, Nanjing University, China",
                 }
             ],
         },
@@ -398,11 +423,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -412,7 +439,8 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "School of Physics, Sun Yat-Sen University, China",
+                    "organization": "School of Physics, Sun Yat-Sen University",
+                    "value": "School of Physics, Sun Yat-Sen University, China",
                 }
             ],
         },
@@ -422,11 +450,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -436,15 +466,18 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
+                    "organization": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University)",
+                    "value": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                 },
             ],
         },
@@ -454,11 +487,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -469,15 +504,18 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
+                    "organization": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University)",
+                    "value": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                 },
             ],
         },
@@ -487,11 +525,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -501,11 +541,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -515,11 +557,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -529,7 +573,8 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "USA",
-                    "organization": "Brookhaven National Laboratory, Upton, USA",
+                    "organization": "Brookhaven National Laboratory, Upton",
+                    "value": "Brookhaven National Laboratory, Upton, USA",
                 }
             ],
         },
@@ -539,11 +584,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -553,11 +600,13 @@ def test_authors(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Center for High Energy Physics, Tsinghua University, China",
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -653,7 +702,22 @@ def test_no_authors_country(shared_datadir, parser):
     content = (shared_datadir / "no_authors_country.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["authors"] == [{"given_names": "Lin", "surname": "Zhao"}]
+    assert parsed_article["authors"] == [
+        {
+            "given_names": "Lin",
+            "surname": "Zhao",
+            "affiliations": [
+                {
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University",
+                },
+                {
+                    "organization": "Center for High Energy Physics, Tsinghua University",
+                    "value": "Center for High Energy Physics, Tsinghua University",
+                },
+            ],
+        }
+    ]
 
 
 def test_no_authors_and_institutions_country(shared_datadir, parser):
@@ -674,11 +738,13 @@ def test_authors_with_missing_fields(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -687,11 +753,13 @@ def test_authors_with_missing_fields(shared_datadir, parser):
             "affiliations": [
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -699,11 +767,13 @@ def test_authors_with_missing_fields(shared_datadir, parser):
             "affiliations": [  # the author misses given_names and name
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
                     "country": "China",
-                    "organization": "Department of Engineering Physics, Tsinghua University, China",
+                    "organization": "Department of Engineering Physics, Tsinghua University",
+                    "value": "Department of Engineering Physics, Tsinghua University, China",
                 },
             ]
         },
