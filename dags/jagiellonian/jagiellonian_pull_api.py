@@ -106,7 +106,7 @@ def jagiellonian_pull_api(from_date=None):
             assertions = item.get("assertion", [])
             if any(
                 assertion.get("name") == "arxiv_main_category"
-                and assertion.get("value") == "hep-ph"
+                and assertion.get("value", "").startswith("hep-")
                 for assertion in assertions
             ):
                 filtered_items.append(item)
