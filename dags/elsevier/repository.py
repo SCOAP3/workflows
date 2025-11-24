@@ -47,6 +47,7 @@ class ElsevierRepository(IRepository):
     def get_by_id(self, id):
         retfile = BytesIO()
         self.s3.download_fileobj(id, retfile)
+        retfile.seek(0)
         return retfile
 
     def save(self, filename, obj, prefix=None):

@@ -1,7 +1,7 @@
 import zipfile
 from io import BytesIO
 from typing import List
-from unittest.mock import Mock, patch
+from unittest.mock import Mock, MagicMock, patch
 
 import pytest
 from common.pull_ftp import migrate_from_ftp, reprocess_files, trigger_file_processing
@@ -14,11 +14,24 @@ SFTP_ZIP_FILES: List[str] = [
     "file1.zip",
     "file2.zip",
 ]
-SFTP_LIST_FILES_RETURN_VALUE: List[str] = SFTP_NOT_ZIP_FILES + SFTP_ZIP_FILES
+SFTP_TAR_FILES: List[str] = [
+    "file1.tar",
+]
+SFTP_LIST_FILES_RETURN_VALUE: List[str] = SFTP_NOT_ZIP_FILES + SFTP_ZIP_FILES + SFTP_TAR_FILES
 
 REPO_FIND_ALL_RETURN_VALUE: List[dict] = [
     {"xml": f, "pdf": f} for f in SFTP_LIST_FILES_RETURN_VALUE
 ]
+
+
+@pytest.fixture
+def tar_fixture():
+    with patch("tarfile.open", autospec=True) as tar_patch:
+        mock_tararchive = MagicMock()
+        mock_tararchive.getnames.return_value = SFTP_TAR_FILES
+        mock_tararchive.extractfile.return_value.read.return_value = BytesIO(b"file content").read()
+        tar_patch.return_value.__enter__.return_value = mock_tararchive
+        yield tar_patch
 
 
 @pytest.fixture
@@ -225,6 +238,82 @@ def test_migrate_from_ftp_specified_file(
     assert repo_save.call_count == 0
     assert repo_find_by_id.call_count == 1
     assert repo_is_meta.call_count == 2
+
+
+@patch.object(SFTPService, attribute="__init__", return_value=None)
+@patch.object(
+    SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
+)
+@patch.object(IRepository, attribute="get_by_id")
+@patch.object(IRepository, attribute="is_meta")
+@patch.object(IRepository, attribute="get_all_raw_filenames")
+@patch.object(IRepository, attribute="save")
+def test_migrate_from_ftp_specified_file_tar(
+    repo_save,
+    repo_get_all,
+    repo_is_meta,
+    repo_find_by_id,
+    sftp_list_files,
+    ftp_init,
+    ftp_get_file_fixture,
+    tar_fixture,
+):
+    repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
+    repo = IRepository()
+    reprocess_files(
+        repo,
+        get_logger().bind(class_name="test_logger"),
+        **{
+            "params": {
+                "force_pull": False,
+                "excluded_directories": [],
+                "filenames_pull": {
+                    "enabled": True,
+                    "filenames": ["file1.tar"],
+                    "force_from_ftp": False,
+                },
+            }
+        }
+    )
+    assert repo_save.call_count == 0
+    assert repo_find_by_id.call_count == 1
+    assert repo_is_meta.call_count == 1
+
+
+@patch.object(
+    SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
+)
+@patch.object(IRepository, attribute="is_meta")
+@patch.object(IRepository, attribute="get_all_raw_filenames")
+@patch.object(IRepository, attribute="save")
+def test_migrate_from_ftp_specified_file_force_from_ftp(
+    repo_save,
+    repo_get_all,
+    repo_is_meta,
+    sftp_list_files,
+    ftp_get_file_fixture,
+    tar_fixture,
+):
+    repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
+    with SFTPService() as sftp:
+        repo = IRepository()
+        migrate_from_ftp(
+            sftp,
+            repo,
+            get_logger().bind(class_name="test_logger"),
+            **{
+                "params": {
+                    "force_pull": False,
+                    "excluded_directories": [],
+                    "filenames_pull": {
+                        "enabled": True,
+                        "filenames": ["file1.tar"],
+                        "force_from_ftp": True,
+                    },
+                }
+            }
+        )
+        assert repo_save.call_count == 2
 
 
 @patch("common.pull_ftp.trigger_dag.trigger_dag")

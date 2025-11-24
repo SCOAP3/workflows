@@ -1,5 +1,6 @@
 import base64
 import io
+import sys
 import os
 import tarfile
 import zipfile
@@ -83,7 +84,7 @@ def reprocess_files(repo, logger, **kwargs):
     logger.msg("Processing specified filenames.")
     filenames_pull_params = kwargs["params"]["filenames_pull"]
     filenames = filenames_pull_params["filenames"]
-    return _find_files_in_zip(filenames, repo)
+    return _find_files_in_extracted_dir(filenames, repo, logger)
 
 
 def _force_pull(
@@ -110,18 +111,45 @@ def _filenames_pull(
     return migrate_files(filenames, s_ftp, repo, logger)
 
 
-def _find_files_in_zip(filenames, repo):
+def _find_files_in_tar(tar_filename, repo, logger):
     extracted_filenames = []
-    for zipped_filename in filenames:
-        zipped_file = repo.get_by_id(f"raw/{zipped_filename}")
-        with zipfile.ZipFile(zipped_file) as zip:
-            for zip_filename in zip.namelist():
-                if repo.is_meta(zip_filename):
-                    filename_without_extension = zipped_filename.split(".")[0]
-                    extracted_filenames.append(
-                        f"extracted/{filename_without_extension}/{zip_filename}"
-                    )
+    logger.msg("Starting tar file reprocessing", tar_filename=tar_filename)
+    tar_file = repo.get_by_id(f"raw/{tar_filename}")
+    with tarfile.open(fileobj=tar_file, mode="r") as tar:
+        for tar_inside_filename in tar.getnames():
+            if repo.is_meta(tar_inside_filename):
+                filename_without_extension = tar_filename.split(".")[0]
+                extracted_filenames.append(
+                    f"extracted/{filename_without_extension}/{tar_inside_filename}"
+                )
     return extracted_filenames
+
+
+def _find_files_in_zip(zipped_filename, repo, logger):
+    extracted_filenames = []
+    logger.msg("Starting zip file reprocessing", zipped_filename=zipped_filename)
+    zipped_file = repo.get_by_id(f"raw/{zipped_filename}")
+    with zipfile.ZipFile(zipped_file) as zip:
+        for zip_filename in zip.namelist():
+            if repo.is_meta(zip_filename):
+                filename_without_extension = zipped_filename.split(".")[0]
+                extracted_filenames.append(
+                    f"extracted/{filename_without_extension}/{zip_filename}"
+                )
+    return extracted_filenames
+
+
+def _find_files_in_extracted_dir(filenames, repo, logger):
+    all_found_files = []
+    for filename in filenames:
+        if filename.endswith(".tar"):
+            all_found_files.extend(_find_files_in_tar(filename, repo, logger))
+        elif filename.endswith(".zip"):
+            all_found_files.extend(_find_files_in_zip(filename, repo, logger))
+        else:
+            logger.msg("This file will be not processed. File is not an archive", filename=filename)
+    logger.msg("Files that will be processed: ", all_found_files=all_found_files, filenames=filenames)
+    return all_found_files
 
 
 def _differential_pull(
