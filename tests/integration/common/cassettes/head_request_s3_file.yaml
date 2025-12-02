@@ -1,0 +1,42 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: HEAD
+      uri: https://scoap3-prod-backend.s3.cern.ch/media/harvested_files/10.1155/2024/3681297/3681297.pdf
+    response:
+      body:
+        string: ""
+      headers:
+        Accept-Ranges:
+          - bytes
+        Bucket:
+          - scoap3-prod-backend
+        Content-Length:
+          - "1013660"
+        Content-Type:
+          - binary/octet-stream
+        Date:
+          - Wed, 19 Mar 2025 14:45:45 GMT
+        Etag:
+          - '"e737b90022b130cf83e58f253ad47a5f"'
+        Last-Modified:
+          - Tue, 25 Feb 2025 00:15:39 GMT
+        X-Amz-Meta-Source-Url:
+          - https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/2024/3681297.pdf
+        X-Amz-Request-Id:
+          - tx00000176051ff8bcdcbfb-0067dad899-3b453ea1-default
+        X-Rgw-Object-Type:
+          - Normal
+      status:
+        code: 200
+        message: OK
+version: 1
