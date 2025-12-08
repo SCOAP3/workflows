@@ -1,2 +1,2 @@
--c https://raw.githubusercontent.com/apache/airflow/constraints-3.1.3/constraints-3.10.txt
+-c constraints.txt
 apache-airflow[celery, postgres, redis, cncf.kubernetes, sentry, amazon]==3.1.3

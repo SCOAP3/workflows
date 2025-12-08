@@ -9,16 +9,15 @@ WORKDIR /opt/airflow
 
 ENV PYTHONBUFFERED=0
 
+COPY constraints.txt ./constraints.txt
 COPY requirements.txt ./requirements.txt
 COPY requirements-test.txt ./requirements-test.txt
 COPY requirements-airflow.txt ./requirements-airflow.txt
 
-COPY dags ./dags
-COPY airflow.cfg ./airflow.cfg
+RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools wheel
+RUN pip install --no-cache-dir --user -r requirements-airflow.txt
+RUN pip install --no-cache-dir --user -r requirements.txt
+RUN pip install --no-cache-dir --user -r requirements-test.txt
 
-RUN pip3 install --upgrade pip
-RUN pip3 install --upgrade setuptools wheel
-RUN pip3 install --no-cache-dir  --force-reinstall -Iv grpcio==1.65.5
-RUN pip3 install --no-cache-dir --user -r requirements-airflow.txt
-RUN pip3 install --no-cache-dir --user -r requirements.txt
-RUN pip3 install --no-cache-dir --user -r requirements-test.txt
+RUN rm constraints.txt
