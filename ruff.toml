@@ -1,0 +1,33 @@
+target-version = "py313"
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # flake8-tidy-imports
+    "TID",
+    # flake8-pytest-style
+    "PT",
+    # airflow-variable-name-task-id-mismatch
+    "AIR",
+]
+
+
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+docstring-code-line-length = 60
