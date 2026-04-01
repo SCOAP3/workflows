@@ -11,22 +11,28 @@ class S3BucketResultObj:
 
 
 S3_RETURNED_VALUES = [
-    "file1.txt",
-    "file1.scoap",
-    "file1.pdf",
-    "file2.txt",
-    "file2.Meta",
-    "file2.pdf",
+    "extracted/file1.txt",
+    "extracted/file1.scoap",
+    "extracted/file1.pdf",
+    "extracted/file2.txt",
+    "extracted/file2.Meta",
+    "extracted/file2.pdf",
 ]
 FIND_ALL_EXPECTED_VALUES = [
-    {"xml": "file1.scoap", "pdf": "file1.pdf"},
-    {"xml": "file2.Meta", "pdf": "file2.pdf"},
+    {
+        "xml": "extracted/file1.scoap",
+        "pdf": "extracted/file1.pdf",
+    },
+    {
+        "xml": "extracted/file2.Meta",
+        "pdf": "extracted/file2.pdf",
+    },
 ]
 FIND_ALL_EXTRACTED_FILES_EXPECTED_VALUES = [
-    "file1.scoap",
-    "file1.pdf",
-    "file2.Meta",
-    "file2.pdf",
+    "extracted/file1.scoap",
+    "extracted/file1.pdf",
+    "extracted/file2.Meta",
+    "extracted/file2.pdf",
 ]
 
 
@@ -58,7 +64,7 @@ def test_save_zip_file(boto3_fixture):
     filename = "test.zip"
     repo = SpringerRepository()
     repo.save(filename, file)
-    upload_mock.assert_called_with(file, "raw/" + filename)
+    upload_mock.assert_called_with(file, repo.ZIPED_DIR + filename)
 
 
 def test_save_file(boto3_fixture):
@@ -67,7 +73,7 @@ def test_save_file(boto3_fixture):
     filename = "test.pdf"
     repo = SpringerRepository()
     repo.save(filename, file)
-    upload_mock.assert_called_with(file, "extracted/" + filename)
+    upload_mock.assert_called_with(file, repo.EXTRACTED_DIR + filename)
 
 
 def test_file_is_meta():

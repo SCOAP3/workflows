@@ -19,28 +19,27 @@ class SpringerRepository(IRepository):
 
     def get_all_raw_filenames(self):
         return [
-            f.key.removeprefix("raw/")
+            f.key.removeprefix(self.ZIPED_DIR)
             for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
         ]
 
     def find_all(self, filenames_to_process=None):
-        ret_dict = {}
-        filenames = []
+        grouped_files = {}
         filenames = (
             filenames_to_process
             if filenames_to_process
             else self.__find_all_extracted_files()
         )
+        if not filenames:
+            return []
         for file in filenames:
-            file_parts = file.split("/")
-            last_part = file_parts[-1]
+            last_part = os.path.basename(file)
             filename_without_extension = last_part.split(".")[0]
-            if filename_without_extension not in ret_dict:
-                ret_dict[filename_without_extension] = dict()
-            ret_dict[filename_without_extension][
-                "xml" if self.is_meta(last_part) else "pdf"
-            ] = file
-        return list(ret_dict.values())
+            if filename_without_extension not in grouped_files:
+                grouped_files[filename_without_extension] = {}
+            extension = "xml" if self.is_meta(last_part) else "pdf"
+            grouped_files[filename_without_extension][extension] = file
+        return list(grouped_files.values())
 
     def get_by_id(self, id):
         retfile = BytesIO()
