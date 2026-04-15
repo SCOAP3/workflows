@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.5
+    method: GET
+    uri: https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:2112.01211&metadataPrefix=arXiv
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\"
+        \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/
+        http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-04-16T11:06:33Z</responseDate>\n
+        \               <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2112.01211\"
+        metadataPrefix=\"arXiv\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n
+        \               <record>\n                <header>\n        <identifier>oai:arXiv.org:2112.01211</identifier>\n
+        \       <datestamp>2022-10-25</datestamp>\n            <setSpec>physics:hep-th</setSpec>\n
+        \           <setSpec>physics:hep-ph</setSpec>\n    </header>\n\n            <metadata>\n
+        \                       <arXiv xmlns=\"http://arxiv.org/OAI/arXiv/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://arxiv.org/OAI/arXiv/ https://oaipmh.arxiv.org/OAI/arXiv.xsd\">\n
+        \       <id>2112.01211</id>\n        <created>2022-10-23</created>\n            <updated>2022-10-25</updated>\n
+        \       <authors>\n                <author>\n                    <keyname>Antoniadis</keyname>\n
+        \                       <forenames>Ignatios</forenames>\n                </author>\n
+        \               <author>\n                    <keyname>Nanopoulos</keyname>\n
+        \                       <forenames>Dimitri V.</forenames>\n                </author>\n
+        \               <author>\n                    <keyname>Rizos</keyname>\n                        <forenames>John</forenames>\n
+        \               </author>\n        </authors>\n        <title>Particle physics
+        and cosmology of the string derived no-scale flipped $SU(5)$</title>\n            <categories>hep-th
+        hep-ph</categories>\n            <comments>47 pages, no figures. v2: published
+        version, few minor changes</comments>\n            <report-no>ACT-05-21, MI-HET-768</report-no>\n
+        \           <doi>10.1140/epjc/s10052-022-10353-6</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n
+        \           <abstract>In a recent paper, we identified a cosmological sector
+        of a flipped $SU(5)$ model derived in the free fermionic formulation of the
+        heterotic superstring, containing the inflaton and the goldstino superfields
+        with a superpotential leading to Starobinsky type inflation, while $SU(5){\\times}U(1)$
+        is still unbroken. Here, we study the properties and phenomenology of the
+        vacuum after the end of inflation, where the gauge group is broken to the
+        Standard Model. We identify a set of vacuum expectation values, triggered
+        by the breaking of an anomalous $U(1)_A$ gauge symmetry at roughly an order
+        of magnitude below the string scale, that solve the F and D-flatness supersymmetric
+        conditions up to 6th order in the superpotential which is explicitly computed,
+        leading to a successful particle phenomenology. In particular, all extra colour
+        triplets become superheavy guaranteeing observable proton stability, while
+        the Higgs doublet mass matrix has a massless pair eigenstate with realistic
+        hierarchical Yukawa couplings to quarks and leptons. The supersymmetry breaking
+        scale is constrained to be high, consistent with the non observation of supersymmetric
+        signals at the LHC.</abstract>\n    </arXiv>\n\n            </metadata>\n
+        \       </record>\n\n    </GetRecord>\n</OAI-PMH>"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3311'
+      Date:
+      - Thu, 16 Apr 2026 11:06:33 GMT
+      X-Cache:
+      - MISS, MISS, MISS
+      X-Served-By:
+      - cache-lga21993-LGA, cache-lga21973-LGA, cache-fra-eddf8230078-FRA
+      X-Timer:
+      - S1776337593.348975,VS0,VE220
+      content-type:
+      - text/xml
+      server:
+      - Google Frontend
+      via:
+      - 1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish
+      x-cloud-trace-context:
+      - 663ac66e9488896105c2df6ae226a91d
+    status:
+      code: 200
+      message: OK
+version: 1
