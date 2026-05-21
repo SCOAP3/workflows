@@ -119,11 +119,9 @@ class APSParser(IParser):
 
                 parsed_affiliations.append(
                     {
-                        "value": affiliation[
-                            "name"
-                        ],  
-                        "organization": org_name,  
-                        "ror": ror,  
+                        "value": affiliation["name"],
+                        "organization": org_name,
+                        "ror": ror,
                     }
                 )
         return parsed_affiliations
