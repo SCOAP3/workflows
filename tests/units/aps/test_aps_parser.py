@@ -62,7 +62,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",  
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
@@ -74,7 +74,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",   
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
@@ -86,7 +86,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",   
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
@@ -98,7 +98,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",   
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
@@ -112,7 +112,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",   
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
@@ -124,7 +124,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",   
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
@@ -136,7 +136,7 @@ def parsed_articles(parser, articles):
                         "affiliations": [
                             {
                                 "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
-                                "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
+                                "organization": "Department of Physics and Astronomy, Vanderbilt University",   
                                 "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
