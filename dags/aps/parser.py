@@ -98,7 +98,7 @@ class APSParser(IParser):
         ]
 
     def extract_organization_and_ror(self, text):
-        pattern = r'<a href="([^"]+)">(.*?)</a>'
+        pattern = r'<a href="([^"]+)">(.*?)</a>.*'
 
         ror_url = None
 
@@ -112,17 +112,18 @@ class APSParser(IParser):
         return modified_text, ror_url
 
     def _get_affiliations(self, article, affiliationIds):
-        parsed_affiliations = [
-            {
-                "value": affiliation["name"],
-                "organization": self.extract_organization_and_ror(affiliation["name"])[
-                    0
-                ],
-                "ror": self.extract_organization_and_ror(affiliation["name"])[1],
-            }
-            for affiliation in article["affiliations"]
-            if affiliation.get("id") in affiliationIds
-        ]
+        parsed_affiliations = []
+        for affiliation in article["affiliations"]:
+            if affiliation.get("id") in affiliationIds:
+                org_name, ror = self.extract_organization_and_ror(affiliation["name"])
+
+                parsed_affiliations.append(
+                    {
+                        "value": affiliation["name"],
+                        "organization": org_name,
+                        "ror": ror,
+                    }
+                )
         return parsed_affiliations
 
     def _get_field_categories(self, article):
