@@ -1,0 +1,56 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: GET
+      uri: http://harvest.aps.org/v2/journals/articles/10.1000/test.pdf
+    response:
+      body:
+        string: !!binary |
+          JVBERi0xLjQgZmFrZSBwZGYgYm9keQ==
+      headers:
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/octet-stream
+        Content-Length:
+          - "22"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: GET
+      uri: http://harvest.aps.org/v2/journals/articles/10.1000/test.xml
+    response:
+      body:
+        string: !!binary |
+          PGFydGljbGU+ZmFrZSB4bWwgYm9keTwvYXJ0aWNsZT4=
+      headers:
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/octet-stream
+        Content-Length:
+          - "33"
+      status:
+        code: 200
+        message: OK
+version: 1
