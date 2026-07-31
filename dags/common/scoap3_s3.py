@@ -1,5 +1,4 @@
 import logging
-import mimetypes
 import os
 from io import BytesIO
 from uuid import uuid4
@@ -11,6 +10,7 @@ from common.s3_service import S3Service
 logger = logging.getLogger("airflow.task")
 
 FILE_EXTENSIONS = {"pdf": ".pdf", "xml": ".xml", "pdfa": ".pdf"}
+CONTENT_TYPES = {"pdf": "application/pdf", "pdfa": "application/pdf", "xml": "application/xml"}
 
 
 def update_filename_extension(filename, type):
@@ -24,19 +24,12 @@ def update_filename_extension(filename, type):
         return f"{filename}{extension}"
 
 
-def get_content_type(filename, response_headers=None):
+def get_content_type(type, response_headers=None):
     content_type = None
     if response_headers:
         content_type = response_headers.get("Content-Type")
     if not content_type or "octet-stream" in content_type:
-        content_type, _ = mimetypes.guess_type(filename)
-    if not content_type:
-        if filename.lower().endswith((".pdf", "_a.pdf", ".pdfa")):
-            content_type = "application/pdf"
-        elif filename.lower().endswith(".xml"):
-            content_type = "application/xml"
-        else:
-            content_type = "binary/octet-stream"
+        content_type = CONTENT_TYPES.get(type, "binary/octet-stream")
     return content_type
 
 
@@ -60,7 +53,7 @@ class Scoap3Repository(IRepository):
         filename = os.path.basename(source_key)
         filename = update_filename_extension(filename, type)
         destination_key = f"{self.upload_dir}/{prefix}/{filename}"
-        content_type = get_content_type(filename)
+        content_type = get_content_type(type)
 
         logger.info("Copying file from %s", copy_source)
         self.client.copy(
@@ -165,14 +158,13 @@ class Scoap3Repository(IRepository):
         except requests.exceptions.HTTPError as e:
             logger.error("Failed to download file. Error: %s URL: %s", str(e), url)
             return
-        content_type = get_content_type(filename, response.headers)
+        content_type = get_content_type(type, response.headers)
         try:
-            # Upload the file to S3
             self.client.put_object(
                 Body=response.content,
                 Bucket=self.bucket,
                 Key=destination_key,
-                ContentType=content_type,  # <-- Injetado no Upload!
+                ContentType=content_type,  
                 Metadata={
                     "source_url": url,
                 },
