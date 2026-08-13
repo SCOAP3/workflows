@@ -32,6 +32,30 @@ def test_get_articles_metadata(mocked_response):
     }
 
 
+def mocked_single_article_response(*args, **kwrgs):
+    mocked_response = mock.Mock()
+    mocked_response.status_code = 200
+    mocked_response.url = args[0]
+    mocked_response.content = (
+        '{"data":{"identifiers":{"doi":"10.1103/PhysRevX.6.041064"}}}'
+    )
+    mocked_response.json = mock.MagicMock(
+        return_value={"data": {"identifiers": {"doi": "10.1103/PhysRevX.6.041064"}}}
+    )
+    return mocked_response
+
+
+@mock.patch("common.request.requests.get", side_effect=mocked_single_article_response)
+def test_get_articles_metadata_single_doi(mocked_get):
+    aps_api_client = APSApiClient()
+    metadata = aps_api_client.get_articles_metadata(
+        parameters=None, doi="10.1103/PhysRevX.6.041064"
+    )
+    assert metadata == {"data": [{"identifiers": {"doi": "10.1103/PhysRevX.6.041064"}}]}
+    requested_url = mocked_get.call_args[0][0]
+    assert "10.1103%2FPhysRevX.6.041064" in requested_url
+
+
 def mocked_empty_response(*args, **kwrgs):
     mocked_response = mock.Mock()
     mocked_response.status_code = 200
