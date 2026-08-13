@@ -10,6 +10,25 @@ def dagbag():
     return DagBag(dag_folder="dags/", include_examples=False)
 
 
+SINGLE_ARTICLE = {"identifiers": {"doi": "10.1103/PhysRevX.6.041064"}}
+
+
+def mocked_single_article_response(*args, **kwargs):
+    mocked_response = mock.Mock()
+    mocked_response.status_code = 200
+    mocked_response.url = args[0]
+    mocked_response.json = mock.MagicMock(return_value={"data": SINGLE_ARTICLE})
+    return mocked_response
+
+
+def mocked_articles_list_response(*args, **kwargs):
+    mocked_response = mock.Mock()
+    mocked_response.status_code = 200
+    mocked_response.url = args[0]
+    mocked_response.json = mock.MagicMock(return_value={"data": [SINGLE_ARTICLE]})
+    return mocked_response
+
+
 @pytest.mark.usefixtures("dagbag")
 class TestUnitApsPullApi:
     def setup_method(self):
@@ -52,6 +71,56 @@ class TestUnitApsPullApi:
         assert len(result) == 2
         assert json.loads(result[0]["article"]) == {"id": "1", "title": "Article 1"}
         assert json.loads(result[1]["article"]) == {"id": "2", "title": "Article 2"}
+
+    def test_dag_has_doi_param(self):
+        assert "doi" in self.dag.params
+
+    @mock.patch(
+        "common.request.requests.get", side_effect=mocked_single_article_response
+    )
+    def test_save_json_in_s3_with_doi(self, mocked_get):
+        task = self.dag.get_task("save_json_in_s3")
+        function_to_unit_test = task.python_callable
+
+        mock_repo = mock.MagicMock()
+        result = function_to_unit_test(
+            dates={"from_date": "2024-01-01", "until_date": "2024-01-02"},
+            repo=mock_repo,
+            params={"doi": "10.1103/PhysRevX.6.041064"},
+        )
+
+        # Only the single-article endpoint is called, without date filters
+        requested_url = mocked_get.call_args[0][0]
+        assert "10.1103%2FPhysRevX.6.041064" in requested_url
+        assert "from=" not in requested_url
+        assert "until=" not in requested_url
+
+        # The snapshot keeps the list shape so downstream tasks work unchanged
+        saved_key, saved_file = mock_repo.save.call_args[0]
+        assert json.loads(saved_file.getvalue()) == {"data": [SINGLE_ARTICLE]}
+        assert result == saved_key
+
+    @mock.patch(
+        "common.request.requests.get", side_effect=mocked_articles_list_response
+    )
+    def test_save_json_in_s3_without_doi(self, mocked_get):
+        task = self.dag.get_task("save_json_in_s3")
+        function_to_unit_test = task.python_callable
+
+        mock_repo = mock.MagicMock()
+        result = function_to_unit_test(
+            dates={"from_date": "2024-01-01", "until_date": "2024-01-02"},
+            repo=mock_repo,
+            params={},
+        )
+
+        requested_url = mocked_get.call_args[0][0]
+        assert "from=2024-01-01" in requested_url
+        assert "until=2024-01-02" in requested_url
+
+        saved_key, saved_file = mock_repo.save.call_args[0]
+        assert json.loads(saved_file.getvalue()) == {"data": [SINGLE_ARTICLE]}
+        assert result == saved_key
 
     def test_dag_structure(self):
         # Verify the trigger task exists in the DAG

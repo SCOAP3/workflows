@@ -12,7 +12,7 @@ class APSApiClient:
         self.base_url = base_url or getenv("APS_API_BASE_URL", "http://harvest.aps.org")
         self.path_segments = path_segments or ["v2", "journals", "articles"]
 
-    def get_articles_metadata(self, parameters, doi=None):
+    def get_articles_metadata(self, parameters=None, doi=None):
         all_path_segments = self.path_segments
         if doi is not None:
             all_path_segments = self.path_segments + [doi]
@@ -22,7 +22,11 @@ class APSApiClient:
             parameters=parameters,
         )
         response_content = request.get_response_json()
-        if len(response_content["data"]) > 0:
+        data = response_content.get("data")
+        if isinstance(data, dict):
+            # Single DOI
+            return {"data": [data]}
+        if data:
             return response_content
 
     def get_pdf_file(self, doi):

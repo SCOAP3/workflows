@@ -21,7 +21,7 @@ logger = logging.getLogger("airflow.task")
     start_date=pendulum.today("UTC").add(days=-1),
     schedule="0 */6 * * *",
     tags=["pull", "aps"],
-    params={"from_date": None, "until_date": None, "per_page": None},
+    params={"from_date": None, "until_date": None, "per_page": None, "doi": None},
 )
 def aps_pull_api():
     @task()
@@ -30,20 +30,23 @@ def aps_pull_api():
 
     @task()
     def save_json_in_s3(dates: dict, repo=APS_REPO, **kwargs):
-        parameters = APSParams(
-            from_date=dates["from_date"],
-            until_date=dates["until_date"],
-            per_page=kwargs.get("per_page"),
-        ).get_params()
+        doi = (kwargs.get("params") or {}).get("doi")
         rest_api = APSApiClient(
             base_url=os.getenv("APS_API_BASE_URL", "http://harvest.aps.org")
         )
-        articles_metadata = rest_api.get_articles_metadata(parameters)
+        if doi:
+            articles_metadata = rest_api.get_articles_metadata(doi=doi)
+        else:
+            parameters = APSParams(
+                from_date=dates["from_date"],
+                until_date=dates["until_date"],
+                per_page=kwargs.get("per_page"),
+            ).get_params()
+            articles_metadata = rest_api.get_articles_metadata(parameters)
         if articles_metadata is not None:
-            articles_metadata = json.dumps(
-                rest_api.get_articles_metadata(parameters)
-            ).encode()
-            return save_file_in_s3(data=articles_metadata, repo=repo)
+            return save_file_in_s3(
+                data=json.dumps(articles_metadata).encode(), repo=repo
+            )
         return None
 
     @task()
