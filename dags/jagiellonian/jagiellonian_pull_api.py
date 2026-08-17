@@ -3,33 +3,14 @@ import os
 from datetime import timedelta
 
 import pendulum
-from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow.providers.http.hooks.http import HttpHook
 from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.sdk import dag, task
 from common.notification_service import FailedDagNotifier
+from jagiellonian.repository import JagiellonianRepository
 
 logger = logging.getLogger("airflow.task")
-
-
-def get_latest_s3_file():
-    s3_bucket = os.getenv("JAGIELLONIAN_BUCKET_NAME", "jagiellonian")
-    aws_conn_id = os.getenv("AWS_CONN_ID", "aws_s3_minio")
-
-    s3_hook = S3Hook(aws_conn_id=aws_conn_id)
-    objects = s3_hook.list_keys(bucket_name=s3_bucket)
-    files = [obj for obj in objects if not obj.endswith("/")]
-    if not files:
-        return None
-
-    file_timestamps = []
-    for file_key in files:
-        object_info = s3_hook.get_key(key=file_key, bucket_name=s3_bucket)
-        file_timestamps.append((file_key, object_info.last_modified))
-
-    file_timestamps.sort(key=lambda x: x[1], reverse=True)
-    latest_timestamp = file_timestamps[0][1].strftime("%Y-%m-%d")
-    return latest_timestamp
+JAGIELLONIAN_REPO = JagiellonianRepository()
 
 
 default_args = {
@@ -53,7 +34,7 @@ default_args = {
 )
 def jagiellonian_pull_api(from_date=None):
     @task(task_id="jagiellonian_fetch_crossref_api")
-    def fetch_crossref_api(from_date_param=None):
+    def fetch_crossref_api(from_date_param=None, repo=JAGIELLONIAN_REPO):
         http_conn_id = os.getenv("HTTP_CONN_ID", "crossref_api")
         endpoint_filter = ""
 
@@ -61,7 +42,7 @@ def jagiellonian_pull_api(from_date=None):
             logger.info("Using provided from_date: %s", from_date_param)
             endpoint_filter = f"from-created-date:{from_date_param}"
         else:
-            latest_s3_file = get_latest_s3_file()
+            latest_s3_file = repo.find_the_last_uploaded_file_date()
             if latest_s3_file:
                 logger.info("Using latest S3 file date: %s", latest_s3_file)
                 endpoint_filter = f"from-created-date:{latest_s3_file}"

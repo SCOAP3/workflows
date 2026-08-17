@@ -46,7 +46,7 @@ def test_save_zip_file(boto3_fixture):
     key = "2022-07-30T03_02_01_content.zip"
     repo = OUPRepository()
     repo.save(key, expected_file)
-    upload_mock.assert_called_with(expected_file, f"{repo.ZIPED_DIR}{key}")
+    upload_mock.assert_called_with(expected_file, f"{repo.RAW_DIR}{key}")
 
 
 def test_save_file(boto3_fixture):
@@ -61,8 +61,8 @@ def test_save_file(boto3_fixture):
 def test_get_all_raw_filenames_keeps_relative_paths(boto3_fixture):
     repo = OUPRepository()
     boto3_fixture.resource.return_value.Bucket.return_value.objects.filter.return_value.all.return_value = [
-        S3BucketResultObj(f"{repo.ZIPED_DIR}issue_2026_01/archive.zip"),
-        S3BucketResultObj(f"{repo.ZIPED_DIR}2026-03-11_12:00:00_issue.xml.zip"),
+        S3BucketResultObj(f"{repo.RAW_DIR}issue_2026_01/archive.zip"),
+        S3BucketResultObj(f"{repo.RAW_DIR}2026-03-11_12:00:00_issue.xml.zip"),
     ]
 
     assert sorted(repo.get_all_raw_filenames()) == sorted(

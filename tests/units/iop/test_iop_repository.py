@@ -61,7 +61,7 @@ def test_save_zip_file(boto3_fixture):
     key = "2022-07-30T03_02_01_content.zip"
     repo = IOPRepository()
     repo.save(key, expected_file)
-    upload_mock.assert_called_with(expected_file, f"{repo.ZIPED_DIR}{key}")
+    upload_mock.assert_called_with(expected_file, f"{repo.RAW_DIR}{key}")
 
 
 def test_save_file(boto3_fixture):

@@ -91,11 +91,11 @@ def springer_data_files_in_s3():
 
     s3_files = {obj.key for obj in repo.s3.objects.all()}
     assert (
-        "extracted/EPJC/ftp_PUB_26-01-26_08-01-27_data/JOU=10052/VOL=2026.86/ISU=1/ART=15241/BodyRef/PDF/10052_2025_Article_15241.pdf"
+        f"{repo.EXTRACTED_DIR}EPJC/ftp_PUB_26-01-26_08-01-27_data/JOU=10052/VOL=2026.86/ISU=1/ART=15241/BodyRef/PDF/10052_2025_Article_15241.pdf"
         in s3_files
     )
     assert (
-        "extracted/JHEP/ftp_PUB_26-02-19_08-01-28_data/JOU=13130/VOL=2026.2026/ISU=2/ART=28203/BodyRef/PDF/13130_2026_Article_28203.pdf"
+        f"{repo.EXTRACTED_DIR}JHEP/ftp_PUB_26-02-19_08-01-28_data/JOU=13130/VOL=2026.2026/ISU=2/ART=28203/BodyRef/PDF/13130_2026_Article_28203.pdf"
         in s3_files
     )
 
@@ -105,7 +105,13 @@ def springer_data_files_in_s3():
 
 def test_dag_loaded(dag):
     assert dag is not None
-    assert len(dag.tasks) == 7
+    assert "parse_file" in dag.task_ids
+    assert "add_data_availability" in dag.task_ids
+    assert "enhance_file" in dag.task_ids
+    assert "populate_files" in dag.task_ids
+    assert "enrich_file" in dag.task_ids
+    assert "save_to_s3" in dag.task_ids
+    assert "create_or_update" in dag.task_ids
 
 
 publisher = "Springer"
@@ -310,6 +316,7 @@ def test_dag_process_file_no_input_file(article):
 def test_extract_data_availability_data(
     dag, epjc_data_article, springer_data_files_in_s3
 ):
+    repo = SpringerRepository()
     expected = {
         "statement": "This manuscript has associated data in a data repository. [Authors' comment: The public release of data supporting the findings of this article will follow the CERN Open Data Policy [124]. Inquiries about plots and tables associated with this article can be addressed to atlas.publications@cern.ch.]\nThismanuscripthasassociatedcode/software in a data repository. [Authors' comment: The ATLAS Collaboration's Athena software, including the configuration of the event generators, is open source (https://gitlab.cern.ch/atlas/athena).]",
         "urls": [
@@ -319,7 +326,7 @@ def test_extract_data_availability_data(
     result = dag.test(
         run_conf={
             "file": base64.b64encode(ET.tostring(epjc_data_article)).decode(),
-            "file_name": "extracted/EPJC/ftp_PUB_26-01-26_08-01-27_data/JOU=10052/VOL=2026.86/ISU=1/ART=15241/10052_2025_Article_15241.xml.Meta",
+            "file_name": f"{repo.EXTRACTED_DIR}EPJC/ftp_PUB_26-01-26_08-01-27_data/JOU=10052/VOL=2026.86/ISU=1/ART=15241/10052_2025_Article_15241.xml.Meta",
             "parse_pdf": True,
         },
         mark_success_pattern="save_to_s3|create_or_update",
@@ -332,13 +339,14 @@ def test_extract_data_availability_data(
 def test_extract_data_availability_no_data(
     dag, jhep_data_article, springer_data_files_in_s3
 ):
+    repo = SpringerRepository()
     expected = {
         "statement": "This article has no associated data or the data will not be deposited.\nThis article has no associated code or the code will not be deposited.",
     }
     result = dag.test(
         run_conf={
             "file": base64.b64encode(ET.tostring(jhep_data_article)).decode(),
-            "file_name": "extracted/JHEP/ftp_PUB_26-02-19_08-01-28_data/JOU=13130/VOL=2026.2026/ISU=2/ART=28203/13130_2026_Article_28203.xml.scoap",
+            "file_name": f"{repo.EXTRACTED_DIR}JHEP/ftp_PUB_26-02-19_08-01-28_data/JOU=13130/VOL=2026.2026/ISU=2/ART=28203/13130_2026_Article_28203.xml.scoap",
             "parse_pdf": True,
         },
         mark_success_pattern="save_to_s3|create_or_update",
@@ -351,10 +359,11 @@ def test_extract_data_availability_no_data(
 def test_extract_data_availability_disabled_by_default(
     dag, epjc_data_article, springer_data_files_in_s3
 ):
+    repo = SpringerRepository()
     result = dag.test(
         run_conf={
             "file": base64.b64encode(ET.tostring(epjc_data_article)).decode(),
-            "file_name": "extracted/EPJC/ftp_PUB_26-01-26_08-01-27_data/JOU=10052/VOL=2026.86/ISU=1/ART=15241/10052_2025_Article_15241.xml.Meta",
+            "file_name": f"{repo.EXTRACTED_DIR}EPJC/ftp_PUB_26-01-26_08-01-27_data/JOU=10052/VOL=2026.86/ISU=1/ART=15241/10052_2025_Article_15241.xml.Meta",
         },
         mark_success_pattern="save_to_s3|create_or_update",
     )

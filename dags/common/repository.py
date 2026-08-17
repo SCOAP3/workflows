@@ -14,6 +14,9 @@ class IRepository:
     def save(self, filename, obj):
         raise NotImplementedError
 
+    def save_parsed(self, filename, obj):
+        raise NotImplementedError
+
     def delete_all(self):
         raise NotImplementedError
 

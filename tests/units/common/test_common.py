@@ -21,7 +21,7 @@ REPO_FIND_ALL_RETURN_VALUE: list[dict] = [
 
 
 class TestRepository(IRepository):
-    ZIPED_DIR = "raw/"
+    RAW_DIR = "raw/"
     EXTRACTED_DIR = "extracted/"
 
 

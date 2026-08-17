@@ -381,6 +381,6 @@ def upload_json_to_s3(json_record, repo):
     current_date_and_time_str = current_date.strftime("%Y-%m-%d_%H:%M:%S")
     doi = get_value(json_record, "dois.value[0]")
     file_key = os.path.join(
-        "parsed", current_date_str, f"{doi}__{current_date_and_time_str}.json"
+        current_date_str, f"{doi}__{current_date_and_time_str}.json"
     )
-    repo.save(file_key, file_in_bytes)
+    repo.save_parsed(file_key, file_in_bytes)

@@ -1,144 +1,52 @@
-import contextlib
-import os
-from datetime import UTC, datetime
 from unittest import mock
 from unittest.mock import MagicMock
-from urllib.parse import urlparse
 
-import boto3
 import pytest
-from airflow.models import Connection, DagBag
-from airflow.utils.session import create_session
-from botocore.client import Config
+from airflow.models import DagBag
+from jagiellonian.repository import JagiellonianRepository
 
-endpoint = os.getenv("S3_ENDPOINT", "s3")
-parsed = urlparse(endpoint if "://" in endpoint else f"http://{endpoint}")
-MINIO_HOST = parsed.hostname or "s3"
+DAG_NAME = "jagiellonian_pull_api"
 
 
-@pytest.fixture(scope="class")
-def dagbag():
-    return DagBag(dag_folder="dags/", include_examples=False)
+@pytest.fixture
+def dag():
+    dagbag = DagBag(dag_folder="dags/", include_examples=False)
+    assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
+    return dagbag.get_dag(dag_id=DAG_NAME)
 
 
-@pytest.mark.usefixtures("dagbag")
-class TestIntegrationJagiellonianPullApi:
-    def setup_method(self):
-        os.environ["AIRFLOW_CONN_AWS_S3_MINIO_TEST"] = (
-            f"aws://airflow:Airflow01@{MINIO_HOST}:9000"
-            f"?endpoint_url=http%3A%2F%2F{MINIO_HOST}%3A9000"
-            "&region_name=us-east-1&verify=false"
-        )
+@pytest.fixture
+def repo():
+    r = JagiellonianRepository()
+    for obj in r.s3_bucket.objects.all():
+        obj.delete()
+    r.s3_bucket.put_object(Key="test.json", Body=b"")
+    yield r
+    for obj in r.s3_bucket.objects.all():
+        obj.delete()
 
-        with create_session() as session:
-            session.query(Connection).filter(
-                Connection.conn_id == "crossref_api_test"
-            ).delete()
-            conn = Connection(
-                conn_id="crossref_api_test",
-                conn_type="http",
-                host="https://api.production.crossref.org",
-            )
-            session.add(conn)
 
-            session.commit()
+def test_dag_loaded(dag):
+    assert dag is not None
 
-        self.dag_id = "jagiellonian_pull_api"
-        self.execution_date = datetime.now(UTC)
 
-        self.dag = DagBag(dag_folder="dags/", include_examples=False).get_dag(
-            self.dag_id
-        )
-        assert self.dag is not None, f"DAG {self.dag_id} failed to load"
+@mock.patch("airflow.providers.http.hooks.http.HttpHook.run")
+def test_fetch_crossref_api(mock_http_run, dag, repo):
+    mock_http_response = MagicMock()
+    mock_http_response.json.return_value = {
+        "message": {"items": [], "total-results": 0}
+    }
+    mock_http_response.raise_for_status = MagicMock()
+    mock_http_run.return_value = mock_http_response
 
-        s3 = boto3.client(
-            "s3",
-            endpoint_url=f"http://{MINIO_HOST}:9000",
-            aws_access_key_id="airflow",
-            aws_secret_access_key="Airflow01",
-            region_name="us-east-1",
-            config=Config(signature_version="s3v4"),
-            verify=False,
-        )
+    task = dag.get_task("jagiellonian_fetch_crossref_api")
+    function_to_unit_test = task.python_callable
 
-        with contextlib.suppress(s3.exceptions.BucketAlreadyOwnedByYou):
-            s3.create_bucket(Bucket="jagiellonian-test", ACL="public-read-write")
-        response = s3.list_objects_v2(Bucket="jagiellonian-test")
+    results = function_to_unit_test(repo=repo)
 
-        if "Contents" in response:
-            objects_to_delete = [{"Key": obj["Key"]} for obj in response["Contents"]]
+    assert mock_http_run.called
 
-            if objects_to_delete:
-                s3.delete_objects(
-                    Bucket="jagiellonian", Delete={"Objects": objects_to_delete}
-                )
+    called_endpoint = mock_http_run.call_args[1]["data"]["filter"]
+    assert "from-created-date:" in called_endpoint
 
-    def teardown_method(self):
-        if "AIRFLOW_CONN_AWS_S3_MINIO_TEST" in os.environ:
-            del os.environ["AIRFLOW_CONN_AWS_S3_MINIO_TEST"]
-
-        s3 = boto3.client(
-            "s3",
-            endpoint_url=f"http://{MINIO_HOST}:9000",
-            aws_access_key_id="airflow",
-            aws_secret_access_key="Airflow01",
-            region_name="us-east-1",
-            config=Config(signature_version="s3v4"),
-            verify=False,
-        )
-        response = s3.list_objects_v2(Bucket="jagiellonian-test")
-
-        if "Contents" in response:
-            objects_to_delete = [{"Key": obj["Key"]} for obj in response["Contents"]]
-
-            if objects_to_delete:
-                s3.delete_objects(
-                    Bucket="jagiellonian-test", Delete={"Objects": objects_to_delete}
-                )
-
-        s3.delete_bucket(Bucket="jagiellonian-test")
-        with create_session() as session:
-            session.query(Connection).filter(
-                Connection.conn_id == "crossref_api_test"
-            ).delete()
-            session.commit()
-
-    @mock.patch.dict(
-        os.environ,
-        {
-            "JAGIELLONIAN_BUCKET_NAME": "jagiellonian-test",
-            "AWS_CONN_ID": "aws_s3_minio_test",
-            "HTTP_CONN_ID": "crossref_api_test",
-        },
-    )
-    @mock.patch("airflow.providers.http.hooks.http.HttpHook.run")
-    def test_fetch_crossref_api(self, mock_http_run):
-        mock_http_response = MagicMock()
-        mock_http_response.json.return_value = {
-            "message": {"items": [], "total-results": 0}
-        }
-        mock_http_response.raise_for_status = MagicMock()
-        mock_http_run.return_value = mock_http_response
-
-        s3 = boto3.client(
-            "s3",
-            endpoint_url=f"http://{MINIO_HOST}:9000",
-            aws_access_key_id="airflow",
-            aws_secret_access_key="Airflow01",
-            region_name="us-east-1",
-            config=Config(signature_version="s3v4"),
-            verify=False,
-        )
-        s3.put_object(Bucket="jagiellonian-test", Key="test.json", Body=b"")
-
-        task = self.dag.get_task("jagiellonian_fetch_crossref_api")
-        function_to_unit_test = task.python_callable
-
-        results = function_to_unit_test()
-
-        assert mock_http_run.called
-
-        called_endpoint = mock_http_run.call_args[1]["data"]["filter"]
-        assert "from-created-date:" in called_endpoint
-
-        assert results == []
+    assert results == []

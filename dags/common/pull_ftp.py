@@ -41,7 +41,7 @@ def migrate_files(
                 repo.save(archive_name, file_bytes)
             else:
                 extracted_or_downloaded_filenames.append(
-                    os.path.join(repo.ZIPED_DIR, archive_name)
+                    os.path.join(repo.RAW_DIR, archive_name)
                 )
                 repo.save(archive_name, file_bytes)
 
@@ -113,7 +113,7 @@ def _filenames_pull(
 def _find_files_in_zip(filenames, repo):
     extracted_filenames = []
     for zipped_filename in filenames:
-        zipped_file = repo.get_by_id(f"{repo.ZIPED_DIR}{zipped_filename}")
+        zipped_file = repo.get_by_id(f"{repo.RAW_DIR}{zipped_filename}")
         with zipfile.ZipFile(zipped_file) as zip:
             for zip_filename in zip.namelist():
                 if repo.is_meta(zip_filename):

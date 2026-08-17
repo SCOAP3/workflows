@@ -11,8 +11,9 @@ logger = logging.getLogger("airflow.task")
 
 
 class ElsevierRepository(IRepository):
-    ZIPED_DIR = "raw/"
+    RAW_DIR = "raw/"
     EXTRACTED_DIR = "extracted/"
+    PARSED_DIR = "parsed/"
 
     def __init__(self):
         super().__init__()
@@ -21,8 +22,8 @@ class ElsevierRepository(IRepository):
 
     def get_all_raw_filenames(self):
         return [
-            f.key.removeprefix("raw/")
-            for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
+            f.key.removeprefix(self.RAW_DIR)
+            for f in self.s3.objects.filter(Prefix=self.RAW_DIR).all()
         ]
 
     def find_all(self, filenames_to_process=None):
@@ -54,11 +55,14 @@ class ElsevierRepository(IRepository):
         obj.seek(0)
         if not prefix:
             prefix = (
-                self.ZIPED_DIR
+                self.RAW_DIR
                 if ".tar" in filename or ".zip" in filename
                 else self.EXTRACTED_DIR
             )
         self.s3.upload_fileobj(obj, prefix + filename)
+
+    def save_parsed(self, filename, obj):
+        self.s3.upload_fileobj(obj, self.PARSED_DIR + filename)
 
     def delete_all(self):
         self.s3.objects.all().delete()
