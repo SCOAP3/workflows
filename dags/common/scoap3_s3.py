@@ -28,6 +28,11 @@ def get_content_type(type, response_headers=None):
     content_type = None
     if response_headers:
         content_type = response_headers.get("Content-Type")
+    if content_type:
+        if "xml" in content_type:
+            return "application/xml"
+        if "pdf" in content_type:
+            return "application/pdf"
     if not content_type or "octet-stream" in content_type:
         content_type = CONTENT_TYPES.get(type, "binary/octet-stream")
     return content_type
@@ -125,7 +130,7 @@ class Scoap3Repository(IRepository):
 
         for type, url in files.items():
             headers = {
-                "Accept": f"application/{type}",
+                "Accept": CONTENT_TYPES.get(type),
             }
             try:
                 downloaded_files[type] = self.download_and_upload_to_s3(

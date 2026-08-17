@@ -69,6 +69,22 @@ def add_data_availability(parsed_json, parsed_xml):
     parsed_json["data_availability"] = parsed_xml.get("data_availability")
     return parsed_json
 
+def populate_files_aps(parsed_file):
+    if "dois" not in parsed_file:
+        return parsed_file
+
+    doi = get_value(parsed_file, "dois.value[0]")
+    logger.info("Populating files for doi: %s", doi)
+
+    files = {
+        "pdf": f"https://harvest.aps.org/v2/journals/articles/{doi}",
+        "xml": f"https://harvest.aps.org/v2/journals/articles/{doi}",
+    }
+    s3_scoap3_client = Scoap3Repository()
+    downloaded_files = s3_scoap3_client.download_files_for_aps(files, prefix=doi)
+    parsed_file["files"] = downloaded_files
+    logger.info("Files populated: %s", parsed_file["files"])
+    return parsed_file
 
 @dag(
     on_failure_callback=FailedDagNotifier(),
@@ -102,21 +118,8 @@ def aps_process_file():
 
     @task()
     def populate_files(parsed_file):
-        if "dois" not in parsed_file:
-            return parsed_file
+        return populate_files_aps(parsed_file)
 
-        doi = get_value(parsed_file, "dois.value[0]")
-        logger.info("Populating files for doi: %s", doi)
-
-        files = {
-            "pdf": f"http://harvest.aps.org/v2/journals/articles/{doi}",
-            "xml": f"http://harvest.aps.org/v2/journals/articles/{doi}",
-        }
-        s3_scoap3_client = Scoap3Repository()
-        downloaded_files = s3_scoap3_client.download_files_for_aps(files, prefix=doi)
-        parsed_file["files"] = downloaded_files
-        logger.info("Files populated: %s", parsed_file["files"])
-        return parsed_file
 
     @task()
     def parse_xml(parsed_file):
